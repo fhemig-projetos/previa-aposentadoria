@@ -15,7 +15,7 @@ from codigo import Servidor, ResultadoRegra
 
 
 class PDFGenerator:
-    def __init__(self, pasta_saida: str = "output/relatorios"):
+    def __init__(self, pasta_saida: str = "output"):
         self.pasta_saida = pasta_saida
         os.makedirs(self.pasta_saida, exist_ok=True)
         self.styles = getSampleStyleSheet()

@@ -5,6 +5,8 @@ from codigo import Servidor
 
 class RepositorioServidores:
     def __init__(self, caminho_excel: str):
+#        self.caminho_excel = caminho_excel
+#        self.df = pd.read_json(caminho_excel, dtype={"masp": str})
         self.caminho_excel = caminho_excel
         self.df = pd.read_excel(caminho_excel, dtype={"MASP": str})
 

@@ -1,0 +1,23 @@
+# Ambiente virtual
+venv/
+.venv/
+
+# Cache Python
+__pycache__/
+*.pyc
+
+# Build
+dist/
+build/
+
+# IDEs
+.vscode/
+.idea/
+
+# Variáveis de ambiente
+.env
+
+# Arquivos
+.xlsx
+/output
+/dados

@@ -67,6 +67,7 @@ class PDFGenerator:
 
         dados_tabela = [
             ["MASP", servidor.masp],
+            ["ADM", servidor.adm],
             ["Nome", servidor.nome],
             ["Data de Nascimento", servidor.data_nascimento.strftime("%d/%m/%Y")],
             ["Idade", f"{servidor.idade} anos"],

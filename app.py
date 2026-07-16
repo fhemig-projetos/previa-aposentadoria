@@ -23,25 +23,31 @@ class AppPreviaAposentadoria:
         st.title("Prévia de Aposentadoria")
 
         st.write(
-            "Informe o MASP do servidor e os dados complementares "
+            "Informe o MASP e ADM do servidor e os dados complementares "
             "para gerar uma simulação preliminar de aposentadoria."
         )
 
-        masp = st.text_input("MASP")
+        col_masp, col_adm = st.columns(2)
 
-        if not masp:
-            st.info("Informe um MASP para iniciar.")
+        with col_masp:
+            masp = st.text_input("MASP")
+
+        with col_adm:
+            adm = st.text_input("ADM")
+
+        if not masp or not adm:
+            st.info("Informe o MASP e o ADM para iniciar.")
             return
 
-        servidor = self.repositorio.buscar_por_masp(masp)
+        servidor = self.repositorio.buscar_por_masp_adm(masp, adm)
 
         if servidor is None:
-            st.error("MASP não encontrado.")
+            st.error("MASP/ADM não encontrado.")
             return
 
         self._exibir_dados_servidor(servidor)
 
-        dados_tempo = self._capturar_dados_tempo()
+        dados_tempo = self._capturar_dados_tempo(servidor)
 
         if st.button("Calcular prévia"):
             resultados = self.simulador.simular(servidor, dados_tempo)
@@ -65,6 +71,7 @@ class AppPreviaAposentadoria:
 
         with col1:
             st.write(f"**MASP:** {servidor.masp}")
+            st.write(f"**ADM:** {servidor.adm}")
             st.write(f"**Nome:** {servidor.nome}")
             st.write(f"**Cargo:** {servidor.cargo}")
             st.write(f"**Função:** {servidor.funcao}")
@@ -83,12 +90,12 @@ class AppPreviaAposentadoria:
                 f"{servidor.sexo}"
             )
             st.write(
-                f"**Idade atual:** "
+                f"**Idade:** "
                 f"{servidor.idade} anos"
             )
             
 
-    def _capturar_dados_tempo(self) -> DadosTempo:
+    def _capturar_dados_tempo(self, servidor) -> DadosTempo:
         st.subheader("Informações complementares")
 
         col1, col2 = st.columns(2)
@@ -98,6 +105,28 @@ class AppPreviaAposentadoria:
                 "Dias de efetivo exercício",
                 min_value=0,
                 step=1
+            )
+
+            data_limite = date(2015, 2, 11)
+            teto_obrigatorio = servidor.data_admissao > data_limite
+
+            if teto_obrigatorio:
+                sujeito_ao_teto = st.selectbox(
+                    "Sujeito ao teto do INSS:",
+                    options=["Sim"],
+                    disabled=True
+                )
+            else:
+                sujeito_ao_teto = st.selectbox(
+                    "Sujeito ao teto do INSS:",
+                    options=["Sim", "Não"]
+                )
+
+            st.caption(
+                "Servidor que ingressou no serviço público a partir de 12/02/2015 "
+                "obrigatoriamente está sujeito ao teto do INSS, já para os servidores "
+                "que ingressaram antes de 12/02/2015 é opcional escolher contribuir "
+                "até o valor do teto do INSS."
             )
 
         with col2:
@@ -123,7 +152,8 @@ class AppPreviaAposentadoria:
             dias_efetivo_exercicio=dias_efetivo_exercicio,
             dias_contribuicao_externa=dias_contribuicao_externa,
             dias_no_cargo=dias_no_cargo,
-            dias_na_carreira=dias_na_carreira
+            dias_na_carreira=dias_na_carreira,
+            sujeito_ao_teto_inss=(sujeito_ao_teto == "Sim")
         )
 
     def _exibir_resultados(self, resultados):

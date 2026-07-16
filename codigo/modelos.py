@@ -6,12 +6,17 @@ from dateutil.relativedelta import relativedelta
 @dataclass
 class Servidor:
     masp: str
+    adm: str
     nome: str
     data_nascimento: date
     sexo: str
     cargo: str
     funcao: str
     data_admissao: date
+    
+    @property
+    def masp_adm(self) -> str:
+        return f"{self.masp}{self.adm}"
     
     @property
     def idade(self) -> int:
@@ -25,7 +30,7 @@ class DadosTempo:
     dias_contribuicao_externa: int
     dias_no_cargo: int
     dias_na_carreira: int
-
+    sujeito_ao_teto_inss: bool = False
 
     @staticmethod
     def dias_para_anos(dias: int) -> float:

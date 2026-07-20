@@ -64,7 +64,7 @@ class AppPreviaAposentadoria:
                     mime="application/pdf"
                 )
 
-    def formatar_indefinido(valor):
+    def formatar_indefinido(self,valor):
         if valor is True:
             return "Sim"
         if valor is False:
@@ -102,11 +102,12 @@ class AppPreviaAposentadoria:
             )
             st.write(
                 f"**Sujeito ao teto do INSS:** "
-                f"{'Sim' if servidor.sujeito_ao_teto_inss is True else 'Não' if servidor.sujeito_ao_teto_inss is False else 'Não informado'}"
+                f"{self.formatar_indefinido(getattr(servidor, 'sujeito_ao_teto_inss', None))}"
+                )
             )
             st.write(
-                f"**Exercício contínuo:** "
-                f"{'Sim' if servidor.interrupcao else 'Não'}"
+                f"**Dias sem interrupção:** "
+                f"{'Sim' if servidor.dias_sem_interrupcao else 'Não'}"
             )
 
     def _capturar_dados_tempo(self, servidor) -> DadosTempo:

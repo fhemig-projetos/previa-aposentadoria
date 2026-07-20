@@ -102,11 +102,11 @@ class AppPreviaAposentadoria:
             )
             st.write(
                 f"**Sujeito ao teto do INSS:** "
-                f"{'Sim' if servidor.sujeito_ao_teto_inss else 'Não'}"
+                f"{'Sim' if servidor.sujeito_ao_teto_inss is True else 'Não' if servidor.sujeito_ao_teto_inss is False else 'Não informado'}"
             )
             st.write(
-                f"**Dias sem interrupção:** "
-                f"{'Sim' if servidor.dias_sem_interrupcao else 'Não'}"
+                f"**Exercício contínuo:** "
+                f"{'Sim' if servidor.interrupcao else 'Não'}"
             )
 
     def _capturar_dados_tempo(self, servidor) -> DadosTempo:
@@ -120,7 +120,26 @@ class AppPreviaAposentadoria:
                 min_value=0,
                 step=1
             )
+            dias_contribuicao_externa = st.number_input(
+                "Dias de contribuição averbado do INSS exclusivamente na iniciativa privada:",
+                min_value=0,
+                step=1
+            )
 
+            dias_no_cargo = st.number_input(
+                "Dias de efetivo exercício no cargo que se dará a aposentadoria, como consta na FIPA:",
+                min_value=0,
+                step=1
+            )
+
+            dias_na_carreira = st.number_input(
+                "Demais dias de contribuição averbados:",
+                min_value=0,
+                step=1
+            )
+            
+
+        with col2:
             data_limite = date(2015, 2, 11)
             teto_obrigatorio = servidor.data_admissao > data_limite
 
@@ -142,31 +161,17 @@ class AppPreviaAposentadoria:
                 "que ingressaram antes de 12/02/2015 é opcional escolher contribuir "
                 "até o valor do teto do INSS."
             )
-
-        with col2:
-            dias_contribuicao_externa = st.number_input(
-                "Dias de contribuição averbado do INSS exclusivamente na iniciativa privada:",
-                min_value=0,
-                step=1
-            )
-
-            dias_no_cargo = st.number_input(
-                "Dias de efetivo exercício no cargo que se dará a aposentadoria, como consta na FIPA:",
-                min_value=0,
-                step=1
-            )
-
-            dias_na_carreira = st.number_input(
-                "Demais dias de contribuição averbados:",
-                min_value=0,
-                step=1
-            )
-            dias_sem_interrupcao = st.selectbox(
-                "O servidor comprova exercício no serviço público",
+            interrupcao = st.selectbox(
+                "O servidor comprova exercício no serviço público sem interrupção desde 16/12/1998:",
                 options=[
                     "Sim",
                     "Não"
                 ]
+            )
+            interrupcao_efetivo = st.selectbox(
+                "O servidor comprova exercício no serviço público em cargo efetivo sem interrupção desde 31/12/2003:",
+                options=["Sim",
+                         "Não"]
             )
             
 
@@ -175,7 +180,9 @@ class AppPreviaAposentadoria:
             dias_contribuicao_externa=dias_contribuicao_externa,
             dias_no_cargo=dias_no_cargo,
             dias_na_carreira=dias_na_carreira,
-            sujeito_ao_teto_inss=(sujeito_ao_teto == "Sim")
+            sujeito_ao_teto_inss=(sujeito_ao_teto == "Sim"),
+            interrupcao=(interrupcao == "Sim"),
+            interrupcao_efetivo=(interrupcao_efetivo == "Sim")
         )
 
     def _exibir_resultados(self, resultados):

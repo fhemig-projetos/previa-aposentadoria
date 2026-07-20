@@ -13,8 +13,9 @@ class Servidor:
     cargo: str
     funcao: str
     data_admissao: date
+    interrupcao: bool = False
+    interrupcao_efetivo: bool = False
     sujeito_ao_teto_inss: bool | None = None
-    dias_sem_interrupcao: bool | None = None
     
     @property
     def masp_adm(self) -> str:
@@ -33,6 +34,8 @@ class DadosTempo:
     dias_no_cargo: int
     dias_na_carreira: int
     sujeito_ao_teto_inss: bool = False
+    interrupcao: bool = False
+    interrupcao_efetivo: bool = False
 
     @staticmethod
     def dias_para_anos(dias: int) -> float:

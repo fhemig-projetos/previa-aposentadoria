@@ -5,5 +5,6 @@ from .repositorio import RepositorioServidores
 from .regras import RegraAposentadoria
 from .regras import RegraIdadeTempoContribuicao
 from .regras import RegraDireitoAdquiridoEC41
+from .regras import RegraTetoInss
 from .simulador import SimuladorAposentadoria
 from .gerador_pdf import PDFGenerator

@@ -149,19 +149,60 @@ class RegraDireitoAdquiridoEC41(RegraAposentadoria):
             ]
         )
 
-class TetoINSS (RegraAposentadoria):
+class RegraTetoInss(RegraAposentadoria):
     def __init__(self):
         super().__init__(
             codigo="TETO_INSS",
-            nome="Regra do Teto do INSS"
+            nome="Regra do teto do INSS"
         )
 
     def avaliar(self, servidor: Servidor, dados_tempo: DadosTempo) -> ResultadoRegra:
         pendencias = []
 
-        if servidor.data_admissao >= date(2015, 2, 12) and not dados_tempo.sujeito_ao_teto_inss:
+        if servidor.data_admissao >= date(2015, 2, 12):
+            if not dados_tempo.sujeito_ao_teto_inss:
+                pendencias.append(
+                    "Servidor admitido a partir de 12/02/2015 deve estar sujeito ao teto do INSS."
+                )
+            obrigatoriedade = "obrigatório"
+        else:
+            obrigatoriedade = "opcional"
+
+        cumpriu = len(pendencias) == 0
+
+        return ResultadoRegra(
+            codigo=self.codigo,
+            nome=self.nome,
+            cumpriu=cumpriu,
+            requisitos={
+                "data_limite": "2015-02-12",
+                "obrigatoriedade": obrigatoriedade,
+                "sujeito_ao_teto_inss": dados_tempo.sujeito_ao_teto_inss
+            },
+            valores_apurados={
+                "data_admissao": servidor.data_admissao.isoformat(),
+                "sujeito_ao_teto_inss": dados_tempo.sujeito_ao_teto_inss
+            },
+            pendencias=pendencias,
+            observacoes=[
+                "Para servidores admitidos após 12/02/2015, o teto do INSS é obrigatório.",
+                "Para servidores admitidos antes dessa data, a contribuição até o teto é opcional."
+            ]
+        )
+
+class Interrupcao(RegraAposentadoria):
+    def __init__(self):
+        super().__init__(
+            codigo="INTERRUPCAO",
+            nome="Regra de Interrupção de Exercício"
+        )
+
+    def avaliar(self, servidor: Servidor, dados_tempo: DadosTempo) -> ResultadoRegra:
+        pendencias = []
+
+        if not dados_tempo.interrupcao:
             pendencias.append(
-                "Servidor admitido após 12/02/2015 deve estar sujeito ao teto do INSS."
+                "Servidor não comprova exercício contínuo no serviço público."
             )
 
         cumpriu = len(pendencias) == 0
@@ -171,15 +212,13 @@ class TetoINSS (RegraAposentadoria):
             nome=self.nome,
             cumpriu=cumpriu,
             requisitos={
-                "data_admissao": servidor.data_admissao.isoformat(),
-                "sujeito_ao_teto_inss": dados_tempo.sujeito_ao_teto_inss
+                "interrupcao": dados_tempo.interrupcao
             },
             valores_apurados={
-                "data_admissao": servidor.data_admissao.isoformat(),
-                "sujeito_ao_teto_inss": dados_tempo.sujeito_ao_teto_inss
+                "interrupcao": dados_tempo.interrupcao
             },
             pendencias=pendencias,
             observacoes=[
-                "Verificar se o servidor está sujeito ao teto do INSS conforme a data de admissão."
+                "Verificar se o servidor possui interrupções no exercício do serviço público."
             ]
         )

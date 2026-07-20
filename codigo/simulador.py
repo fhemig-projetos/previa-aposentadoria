@@ -3,6 +3,7 @@ from codigo import (
     RegraAposentadoria,
     RegraIdadeTempoContribuicao,
     RegraDireitoAdquiridoEC41,
+    RegraTetoInss,
 )
 
 
@@ -11,6 +12,7 @@ class SimuladorAposentadoria:
         self.regras: list[RegraAposentadoria] = [
             RegraIdadeTempoContribuicao(),
             RegraDireitoAdquiridoEC41(),
+            RegraTetoInss(),
         ]
 
     def simular(

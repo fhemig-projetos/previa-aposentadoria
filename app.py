@@ -104,7 +104,7 @@ class AppPreviaAposentadoria:
                 f"**Sujeito ao teto do INSS:** "
                 f"{self.formatar_indefinido(getattr(servidor, 'sujeito_ao_teto_inss', None))}"
                 )
-            )
+            
             st.write(
                 f"**Dias sem interrupção:** "
                 f"{'Sim' if servidor.dias_sem_interrupcao else 'Não'}"

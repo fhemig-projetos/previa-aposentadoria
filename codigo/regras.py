@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 from codigo import Servidor, DadosTempo, ResultadoRegra
+from datetime import date
 
 
 class RegraAposentadoria(ABC):
@@ -145,5 +146,40 @@ class RegraDireitoAdquiridoEC41(RegraAposentadoria):
             observacoes=[
                 "Previsão ilustrativa da regra.",
                 "Necessária validação jurídica e previdenciária."
+            ]
+        )
+
+class TetoINSS (RegraAposentadoria):
+    def __init__(self):
+        super().__init__(
+            codigo="TETO_INSS",
+            nome="Regra do Teto do INSS"
+        )
+
+    def avaliar(self, servidor: Servidor, dados_tempo: DadosTempo) -> ResultadoRegra:
+        pendencias = []
+
+        if servidor.data_admissao >= date(2015, 2, 12) and not dados_tempo.sujeito_ao_teto_inss:
+            pendencias.append(
+                "Servidor admitido após 12/02/2015 deve estar sujeito ao teto do INSS."
+            )
+
+        cumpriu = len(pendencias) == 0
+
+        return ResultadoRegra(
+            codigo=self.codigo,
+            nome=self.nome,
+            cumpriu=cumpriu,
+            requisitos={
+                "data_admissao": servidor.data_admissao.isoformat(),
+                "sujeito_ao_teto_inss": dados_tempo.sujeito_ao_teto_inss
+            },
+            valores_apurados={
+                "data_admissao": servidor.data_admissao.isoformat(),
+                "sujeito_ao_teto_inss": dados_tempo.sujeito_ao_teto_inss
+            },
+            pendencias=pendencias,
+            observacoes=[
+                "Verificar se o servidor está sujeito ao teto do INSS conforme a data de admissão."
             ]
         )

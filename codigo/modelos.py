@@ -13,6 +13,8 @@ class Servidor:
     cargo: str
     funcao: str
     data_admissao: date
+    sujeito_ao_teto_inss: bool | None = None
+    dias_sem_interrupcao: bool | None = None
     
     @property
     def masp_adm(self) -> str:

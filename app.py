@@ -64,6 +64,13 @@ class AppPreviaAposentadoria:
                     mime="application/pdf"
                 )
 
+    def formatar_indefinido(valor):
+        if valor is True:
+            return "Sim"
+        if valor is False:
+            return "Não"
+        return "Não informado"
+
     def _exibir_dados_servidor(self, servidor):
         st.subheader("Dados funcionais")
 
@@ -93,7 +100,14 @@ class AppPreviaAposentadoria:
                 f"**Idade:** "
                 f"{servidor.idade} anos"
             )
-            
+            st.write(
+                f"**Sujeito ao teto do INSS:** "
+                f"{'Sim' if servidor.sujeito_ao_teto_inss else 'Não'}"
+            )
+            st.write(
+                f"**Dias sem interrupção:** "
+                f"{'Sim' if servidor.dias_sem_interrupcao else 'Não'}"
+            )
 
     def _capturar_dados_tempo(self, servidor) -> DadosTempo:
         st.subheader("Informações complementares")
@@ -102,7 +116,7 @@ class AppPreviaAposentadoria:
 
         with col1:
             dias_efetivo_exercicio = st.number_input(
-                "Dias de efetivo exercício",
+                "Dias trabalhados no serviço público, como consta na FIPA:",
                 min_value=0,
                 step=1
             )
@@ -131,22 +145,30 @@ class AppPreviaAposentadoria:
 
         with col2:
             dias_contribuicao_externa = st.number_input(
-                "Dias de contribuição externa averbada",
+                "Dias de contribuição averbado do INSS exclusivamente na iniciativa privada:",
                 min_value=0,
                 step=1
             )
 
             dias_no_cargo = st.number_input(
-                "Dias no cargo efetivo",
+                "Dias de efetivo exercício no cargo que se dará a aposentadoria, como consta na FIPA:",
                 min_value=0,
                 step=1
             )
 
             dias_na_carreira = st.number_input(
-                "Dias na carreira",
+                "Demais dias de contribuição averbados:",
                 min_value=0,
                 step=1
             )
+            dias_sem_interrupcao = st.selectbox(
+                "O servidor comprova exercício no serviço público",
+                options=[
+                    "Sim",
+                    "Não"
+                ]
+            )
+            
 
         return DadosTempo(
             dias_efetivo_exercicio=dias_efetivo_exercicio,

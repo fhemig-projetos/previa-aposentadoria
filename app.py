@@ -107,7 +107,7 @@ class AppPreviaAposentadoria:
             
             st.write(
                 f"**Dias sem interrupção:** "
-                f"{'Sim' if servidor.dias_sem_interrupcao else 'Não'}"
+                f"{self.formatar_indefinido(getattr(servidor, 'interrupcao', None))}"
             )
 
     def _capturar_dados_tempo(self, servidor) -> DadosTempo:

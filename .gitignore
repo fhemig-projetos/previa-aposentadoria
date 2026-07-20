@@ -19,5 +19,5 @@ build/
 
 # Arquivos
 .xlsx
-/output
-/dados
+output/
+dados/

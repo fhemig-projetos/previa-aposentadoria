@@ -16,7 +16,7 @@ def tela_login():
     if st.button("Entrar"):
         try:
             usuarios = st.secrets["usuarios"]
-            if usuario in usuarios and senha == usuarios:
+            if usuario in usuarios and senha == usuarios[usuario]:
                 st.session_state["autenticado"] = True
                 st.session_state["usuario"] = usuario
                 st.rerun()

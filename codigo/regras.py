@@ -160,7 +160,8 @@ class RegraGeral(RegraAposentadoria):
             },
             pendencias=pendencias,
             observacoes=[
-                "Para se aposentar pelas regras permanentes, é necessário que o servidor cumpra cumulativamente (todas as exigências)."
+                "Previsão ilustrativa da regra.",
+                "Para se aposentar pelas regras permanentes, é necessário que o servidor cumpra cumulativamente todas as exigências.",
             ]
         )
 

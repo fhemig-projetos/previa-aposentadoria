@@ -7,6 +7,41 @@ from codigo import SimuladorAposentadoria
 from codigo import PDFGenerator
 from codigo.converter_json import converter_excel_para_json
 
+def tela_login():
+    st.title("Login")
+
+    usuario = st.text_input("Usuário:")
+    senha = st.text_input("Senha", type="password")
+
+    if st.button("Entrar"):
+        try:
+            usuarios = st.secrets["usuarios"]
+            if usuario in usuarios and senha == usuarios:
+                st.session_state["autenticado"] = True
+                st.session_state["usuario"] = usuario
+                st.rerun()
+            else:
+                st.error("Usuário ou senha inválidos.")
+        except KeyError:
+            st.error("Usuários não configurados nos Secrets do Streamlit Cloud.")
+
+def verificar_login():
+    if "autenticado" not in st.session_state:
+        st.session_state["autenticado"] = False
+
+    if not st.session_state["autenticado"]:
+        tela_login()
+        st.stop()
+
+def botao_sair():
+    with st.sidebar:
+        usuario_logado = st.session_state.get("usuario", "")
+        st.write(f"Usuário: {usuario_logado}")
+
+        if st.button("Sair"):
+            st.session_state["autenticado"] = False
+            st.session_state["usuario"] = ""
+            st.rerun()
 
 st.set_page_config(
     page_title="Prévia de Aposentadoria",
@@ -16,6 +51,7 @@ st.set_page_config(
 
 class AppPreviaAposentadoria:
     def __init__(self):
+        self._atualizar_base_dados()
         self.repositorio = RepositorioServidores("dados/dados_cadastrais.json")
         self.simulador = SimuladorAposentadoria()
         self.pdf_generator = PDFGenerator()
@@ -33,7 +69,6 @@ class AppPreviaAposentadoria:
             st.stop()
 
     def executar(self):
-        self._atualizar_base_dados()
         st.title("Prévia de Aposentadoria")
         st.write(
             "Informe o MASP e o número de admissão do servidor "
@@ -250,5 +285,8 @@ class AppPreviaAposentadoria:
 
 
 if __name__ == "__main__":
+    verificar_login()
+    botao_sair()
+
     app = AppPreviaAposentadoria()
     app.executar()

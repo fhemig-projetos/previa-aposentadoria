@@ -13,8 +13,6 @@ class Servidor:
     cargo: str
     funcao: str
     data_admissao: date
-    interrupcao: bool = False
-    interrupcao_efetivo: bool = False
     sujeito_ao_teto_inss: bool | None = None
     
     @property
@@ -32,10 +30,13 @@ class DadosTempo:
     dias_efetivo_exercicio: int
     dias_contribuicao_externa: int
     dias_no_cargo: int
-    dias_na_carreira: int
+    demais_dias: int
+    dias_abono: int
     sujeito_ao_teto_inss: bool = False
     interrupcao: bool = False
-    interrupcao_efetivo: bool = False
+    interrupcao_efetivo_2003: bool = False
+    interrupcao_efetivo_2020: bool = False
+    ferias_premio: bool = False
 
     @staticmethod
     def dias_para_anos(dias: int) -> float:
@@ -59,7 +60,7 @@ class DadosTempo:
 
     @property
     def anos_na_carreira(self) -> float:
-        return self.dias_para_anos(self.dias_na_carreira)
+        return self.dias_para_anos(self.demais_dias)
 
 
 @dataclass

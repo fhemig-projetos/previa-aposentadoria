@@ -5,6 +5,7 @@ from codigo import DadosTempo
 from codigo import RepositorioServidores
 from codigo import SimuladorAposentadoria
 from codigo import PDFGenerator
+from codigo.converter_json import converter_excel_para_json
 
 
 st.set_page_config(
@@ -15,15 +16,27 @@ st.set_page_config(
 
 class AppPreviaAposentadoria:
     def __init__(self):
-        self.repositorio = RepositorioServidores("dados/dados_cadastrais.xlsx")
+        self.repositorio = RepositorioServidores("dados/dados_cadastrais.json")
         self.simulador = SimuladorAposentadoria()
         self.pdf_generator = PDFGenerator()
 
-    def executar(self):
-        st.title("Prévia de Aposentadoria")
+    def _atualizar_base_dados(self):
+        try:
+            converter_excel_para_json(
+                caminho_excel="dados/dados_cadastrais.xlsx",
+                caminho_json="dados/dados_cadastrais.json"
+            )
+        except Exception as e:
+            st.error(
+                f"Erro ao carregar bases de dados: {e}"
+            )
+            st.stop()
 
+    def executar(self):
+        self._atualizar_base_dados()
+        st.title("Prévia de Aposentadoria")
         st.write(
-            "Informe o MASP e ADM do servidor e os dados complementares "
+            "Informe o MASP e o número de admissão do servidor "
             "para gerar uma simulação preliminar de aposentadoria."
         )
 
@@ -78,18 +91,18 @@ class AppPreviaAposentadoria:
 
         with col1:
             st.write(f"**MASP:** {servidor.masp}")
-            st.write(f"**ADM:** {servidor.adm}")
+            st.write(f"**Número de Admissão:** {servidor.adm}")
             st.write(f"**Nome:** {servidor.nome}")
-            st.write(f"**Cargo:** {servidor.cargo}")
-            st.write(f"**Função:** {servidor.funcao}")
+            st.write(f"**Carreira:** {servidor.cargo}")
+            st.write(f"**Categoria Profissional:** {servidor.funcao}")
 
         with col2:
             st.write(
-                f"**Data de admissão:** "
+                f"**Data de Admissão:** "
                 f"{servidor.data_admissao.strftime('%d/%m/%Y')}"
             )
             st.write(
-                f"**Data de nascimento:** "
+                f"**Data de Nascimento:** "
                 f"{servidor.data_nascimento.strftime('%d/%m/%Y')}"
             )
             st.write(
@@ -100,15 +113,15 @@ class AppPreviaAposentadoria:
                 f"**Idade:** "
                 f"{servidor.idade} anos"
             )
-            st.write(
-                f"**Sujeito ao teto do INSS:** "
-                f"{self.formatar_indefinido(getattr(servidor, 'sujeito_ao_teto_inss', None))}"
-                )
+            #st.write(
+            #    f"**Sujeito ao teto do INSS:** "
+            #    f"{self.formatar_indefinido(getattr(servidor, 'sujeito_ao_teto_inss', None))}"
+            #    )
             
-            st.write(
-                f"**Dias sem interrupção:** "
-                f"{self.formatar_indefinido(getattr(servidor, 'interrupcao', None))}"
-            )
+            #st.write(
+            #    f"**Dias sem interrupção:** "
+            #    f"{self.formatar_indefinido(getattr(servidor, 'interrupcao', None))}"
+            #)
 
     def _capturar_dados_tempo(self, servidor) -> DadosTempo:
         st.subheader("Informações complementares")
@@ -133,14 +146,11 @@ class AppPreviaAposentadoria:
                 step=1
             )
 
-            dias_na_carreira = st.number_input(
+            demais_dias = st.number_input(
                 "Demais dias de contribuição averbados:",
                 min_value=0,
                 step=1
             )
-            
-
-        with col2:
             data_limite = date(2015, 2, 11)
             teto_obrigatorio = servidor.data_admissao > data_limite
 
@@ -161,7 +171,10 @@ class AppPreviaAposentadoria:
                 "obrigatoriamente está sujeito ao teto do INSS, já para os servidores "
                 "que ingressaram antes de 12/02/2015 é opcional escolher contribuir "
                 "até o valor do teto do INSS."
-            )
+            )            
+
+        with col2:
+
             interrupcao = st.selectbox(
                 "O servidor comprova exercício no serviço público sem interrupção desde 16/12/1998:",
                 options=[
@@ -169,10 +182,28 @@ class AppPreviaAposentadoria:
                     "Não"
                 ]
             )
-            interrupcao_efetivo = st.selectbox(
+            interrupcao_efetivo_2003 = st.selectbox(
                 "O servidor comprova exercício no serviço público em cargo efetivo sem interrupção desde 31/12/2003:",
                 options=["Sim",
-                         "Não"]
+                         "Não"
+                ]
+            )
+            interrupcao_efetivo_2020 = st.selectbox(
+                "O servidor comprova exercício no serviço público em cargo efetivo sem interrupção desde 15/09/2020:",
+                options=[
+                    "Sim",
+                    "Não"
+                ]
+            )
+            ferias_premio = st.number_input(
+                "Dias de férias prêmio adquiridas até 16/12/1998 a serem contadas em dobro para aposentadoria:",
+                min_value=0,
+                step=1
+            )
+            dias_abono = st.number_input(
+                "Dias de abono 1.2 ou 1.7 que o servidor possui como consta no campo da Matriz de Apuração de Tempo para Aposentadoria:",
+                min_value=0,
+                step=1
             )
             
 
@@ -180,10 +211,13 @@ class AppPreviaAposentadoria:
             dias_efetivo_exercicio=dias_efetivo_exercicio,
             dias_contribuicao_externa=dias_contribuicao_externa,
             dias_no_cargo=dias_no_cargo,
-            dias_na_carreira=dias_na_carreira,
+            demais_dias=demais_dias,
             sujeito_ao_teto_inss=(sujeito_ao_teto == "Sim"),
             interrupcao=(interrupcao == "Sim"),
-            interrupcao_efetivo=(interrupcao_efetivo == "Sim")
+            interrupcao_efetivo_2003=(interrupcao_efetivo_2003 == "Sim"),
+            interrupcao_efetivo_2020=(interrupcao_efetivo_2020=="Sim"),
+            ferias_premio=ferias_premio,
+            dias_abono=dias_abono
         )
 
     def _exibir_resultados(self, resultados):

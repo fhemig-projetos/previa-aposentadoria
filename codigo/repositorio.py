@@ -5,10 +5,9 @@ from codigo import Servidor
 
 class RepositorioServidores:
     def __init__(self, caminho_excel: str):
-#        self.caminho_excel = caminho_excel
-#        self.df = pd.read_json(caminho_excel, dtype={"masp": str})
         self.caminho_excel = caminho_excel
-        self.df = pd.read_excel(caminho_excel, dtype={"MASP": str, "ADM": str})
+        self.df = pd.read_json(caminho_excel, dtype={"masp": str})
+        #self.df = pd.read_excel(caminho_excel, dtype={"MASP": str, "ADM": str})
 
     def buscar_por_masp_adm(self, masp: str, adm: str) -> Servidor | None:
         masp_adm_busca = f"{masp}{adm}"
@@ -32,9 +31,9 @@ class RepositorioServidores:
             masp=dados["MASP"],
             adm=dados["Nº Admissão"],
             nome=dados["Nome Servidor"],
-            data_nascimento=dados["Data Completa"].date(),
+            data_nascimento= pd.to_datetime(dados["Data Completa"]).date(),
             sexo=dados["Cod Sexo"],
             cargo=dados["Cod Carreira"],
             funcao=dados["Categoria Profissional/Ocupação"],
-            data_admissao=dados["Data Exercício"].date()
+            data_admissao=pd.to_datetime(dados["Data Exercício"]).date()
         )

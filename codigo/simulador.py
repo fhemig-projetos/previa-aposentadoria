@@ -1,18 +1,16 @@
 from codigo import Servidor, DadosTempo, ResultadoRegra
 from codigo import (
     RegraAposentadoria,
-    RegraIdadeTempoContribuicao,
-    RegraDireitoAdquiridoEC41,
-    RegraTetoInss,
+    RegraDireitoAdquirido,
+    RegraGeral,
 )
 
 
 class SimuladorAposentadoria:
     def __init__(self):
         self.regras: list[RegraAposentadoria] = [
-            RegraIdadeTempoContribuicao(),
-            RegraDireitoAdquiridoEC41(),
-            RegraTetoInss(),
+            RegraDireitoAdquirido(),
+            RegraGeral(),
         ]
 
     def simular(

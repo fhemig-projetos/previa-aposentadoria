@@ -19,11 +19,8 @@ def converter_excel_para_json(
         date_format="iso"
     )
 
-    print(f"Arquivo JSON gerado com sucesso: {caminho_json}")
-
-
 if __name__ == "__main__":
     converter_excel_para_json(
-        caminho_excel="dados_cadastrais.xlsx",
-        caminho_json="dados_cadastrais.json"
+        caminho_excel="dados/dados_cadastrais.xlsx",
+        caminho_json="dados/dados_cadastrais.json"
     )

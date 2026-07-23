@@ -19,7 +19,7 @@ def exibir_cabecalho():
     col_logo, col_titulo = st.columns([1,7], vertical_alignment="center")
     with col_logo:
         st.image(
-            "assets/logoFhemig.png",
+            "assets/LogoFhemig.png",
             width=180
         )
     with col_titulo:

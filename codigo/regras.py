@@ -48,26 +48,26 @@ class RegraDireitoAdquirido(RegraAposentadoria):
         if dados_tempo.anos_total_contribuicao < contribuicao_minima:
             faltam = contribuicao_minima - dados_tempo.anos_total_contribuicao
             pendencias.append(
-                f"Faltam aproximadamente {faltam:.2f} anos de contribuição."
+                f"Faltam {faltam} anos de contribuição."
             )
 
         if dados_tempo.anos_efetivo_exercicio < servico_publico_minimo:
             faltam = servico_publico_minimo - dados_tempo.anos_efetivo_exercicio
             pendencias.append(
-                f"Faltam aproximadamente {faltam:.2f} anos de serviço público."
+                f"Faltam {faltam} anos de serviço público."
             )
 # ENTENDER MELHOR CONTRIBUIÇÃO NA CARREIRA = 10 ANOS
 # DIFERENÇA ENTRE CARREIRA E CARGO?
         if dados_tempo.anos_na_carreira < carreira_minima:
             faltam = carreira_minima - dados_tempo.anos_na_carreira
             pendencias.append(
-                f"Faltam aproximadamente {faltam:.2f} anos na carreira."
+                f"Faltam {faltam} anos na carreira."
             )
 
         if dados_tempo.anos_no_cargo < cargo_minimo:
             faltam = cargo_minimo - dados_tempo.anos_no_cargo
             pendencias.append(
-                f"Faltam aproximadamente {faltam:.2f} anos no cargo."
+                f"Faltam  {faltam} anos no cargo."
             )
 
         return ResultadoRegra(
@@ -84,10 +84,10 @@ class RegraDireitoAdquirido(RegraAposentadoria):
             },
             valores_apurados={
                 "idade": servidor.idade,
-                "anos_total_contribuicao": round(dados_tempo.anos_total_contribuicao, 2),
-                "anos_efetivo_exercicio": round(dados_tempo.anos_efetivo_exercicio, 2),
-                "anos_na_carreira": round(dados_tempo.anos_na_carreira, 2),
-                "anos_no_cargo": round(dados_tempo.anos_no_cargo, 2),
+                "anos_total_contribuicao": dados_tempo.anos_total_contribuicao,
+                "anos_efetivo_exercicio": dados_tempo.anos_efetivo_exercicio,
+                "anos_na_carreira": dados_tempo.anos_na_carreira,
+                "anos_no_cargo": dados_tempo.anos_no_cargo,
                 "data_admissao": servidor.data_admissao.strftime("%d/%m/%Y")
             },
             pendencias=pendencias,
@@ -119,25 +119,25 @@ class RegraGeral(RegraAposentadoria):
         if servidor.idade < idade_minima:
             faltam = idade_minima - servidor.idade
             pendencias.append(
-                f"Faltam {faltam:.2f} anos de idade."
+                f"Faltam {faltam} anos de idade."
             )
         
         if dados_tempo.anos_total_contribuicao < contribuicao_minima:
             faltam = contribuicao_minima - dados_tempo.anos_total_contribuicao
             pendencias.append(
-                f"Faltam {faltam:.2f} anos de contribuição."
+                f"Faltam {faltam} anos de contribuição."
             )
         
         if dados_tempo.anos_efetivo_exercicio < tempo_minimo_servico_publico:
             faltam = tempo_minimo_servico_publico - dados_tempo.anos_efetivo_exercicio
             pendencias.append(
-                f"Faltam {faltam:.2f} anos de serviço público."
+                f"Faltam {faltam} anos de serviço público."
             )
         
         if dados_tempo.anos_no_cargo < tempo_minimo_cargo:
             faltam = tempo_minimo_cargo < dados_tempo.anos_no_cargo
             pendencias.append(
-                f"Faltam {faltam:.2f} anos no cargo."
+                f"Faltam {faltam} anos no cargo."
             )
         
         cumpriu = len(pendencias) == 0
@@ -154,9 +154,9 @@ class RegraGeral(RegraAposentadoria):
             },
             valores_apurados={
                 "idade": servidor.idade,
-                "anos_total_contribuicao": round(dados_tempo.anos_total_contribuicao,2),
-                "anos_efetivo_exercicio": round(dados_tempo.anos_efetivo_exercicio,2),
-                "anos_no_cargo": round(dados_tempo.anos_no_cargo,2)
+                "anos_total_contribuicao": dados_tempo.anos_total_contribuicao,
+                "anos_efetivo_exercicio": dados_tempo.anos_efetivo_exercicio,
+                "anos_no_cargo": dados_tempo.anos_no_cargo,
             },
             pendencias=pendencias,
             observacoes=[

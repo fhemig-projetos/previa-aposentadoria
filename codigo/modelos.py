@@ -1,6 +1,7 @@
 from dataclasses import dataclass
 from datetime import date
 from dateutil.relativedelta import relativedelta
+import math
 
 
 @dataclass
@@ -39,27 +40,27 @@ class DadosTempo:
     ferias_premio: bool = False
 
     @staticmethod
-    def dias_para_anos(dias: int) -> float:
-        return dias / 365.25
+    def dias_para_anos(dias: int) -> int: #mudei para int
+        return math.floor(dias / 365.25)
 
     @property
-    def anos_efetivo_exercicio(self) -> float:
+    def anos_efetivo_exercicio(self) -> int: #mudei para int
         return self.dias_para_anos(self.dias_efetivo_exercicio)
 
     @property
-    def anos_contribuicao_externa(self) -> float:
+    def anos_contribuicao_externa(self) -> int:
         return self.dias_para_anos(self.dias_contribuicao_externa)
 
     @property
-    def anos_total_contribuicao(self) -> float:
+    def anos_total_contribuicao(self) -> int:
         return self.anos_efetivo_exercicio + self.anos_contribuicao_externa
 
     @property
-    def anos_no_cargo(self) -> float:
+    def anos_no_cargo(self) -> int:
         return self.dias_para_anos(self.dias_no_cargo)
 
     @property
-    def anos_na_carreira(self) -> float:
+    def anos_na_carreira(self) -> int:
         return self.dias_para_anos(self.demais_dias)
 
 

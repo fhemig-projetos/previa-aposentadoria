@@ -1,5 +1,6 @@
 import streamlit as st
 from datetime import date
+import pandas as pd
 
 from codigo import DadosTempo
 from codigo import RepositorioServidores
@@ -7,9 +8,36 @@ from codigo import SimuladorAposentadoria
 from codigo import PDFGenerator
 from codigo.converter_json import converter_excel_para_json
 
-def tela_login():
-    st.title("Login")
+st.set_page_config(
+    page_title="Prévia de Aposentadoria",
+    page_icon="assets/icone.png",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
 
+def exibir_cabecalho():
+    col_logo, col_titulo = st.columns([1,7], vertical_alignment="center")
+    with col_logo:
+        st.image(
+            "assets/logoFhemig.png",
+            width=180
+        )
+    with col_titulo:
+        st.markdown(
+            """
+            <h1 style='margin-bottom: 0;'>Prévia de Aposentadoria</h1>
+            <p style='font-size: 18px; color: #bdbdbd; margin-top: 0;'>
+            Sistema de simulação previdenciária desenvolvido pela Diretoria de Gestão de Pessoas.
+            </p>
+            """,
+            unsafe_allow_html=True
+        )
+    st.divider()
+
+def tela_login():
+    exibir_cabecalho()
+    #st.title("Login")
+    st.subheader("Login")
     usuario = st.text_input("Usuário:")
     senha = st.text_input("Senha", type="password")
 
@@ -69,7 +97,7 @@ class AppPreviaAposentadoria:
             st.stop()
 
     def executar(self):
-        st.title("Prévia de Aposentadoria")
+        exibir_cabecalho()
         st.write(
             "Informe o MASP e o número de admissão do servidor "
             "para gerar uma simulação preliminar de aposentadoria."
@@ -255,33 +283,72 @@ class AppPreviaAposentadoria:
             dias_abono=dias_abono
         )
 
+    def _formatar_chave(self, chave: str) -> str:
+        traducoes = {
+            "idade": "Idade",
+            #"sexo": "Sexo",
+            #"data_nascimento": "Data de nascimento",
+            "anos_efetivo_exercicio": "Anos de efetivo exercício",
+            "anos_contribuicao_externa": "Anos de contribuição externa",
+            "anos_total_contribuicao": "Tempo total de contribuição",
+            "anos_no_cargo": "Anos no cargo",
+            "anos_na_carreira": "Anos na carreira",
+
+            "idade_minima": "Idade mínima",
+            "contribuicao_minima": "Tempo mínimo de contribuição",
+            "tempo_minimo_cargo": "Tempo mínimo no cargo",
+            "servico_publico_minimo": "Tempo mínimo de serviço público",
+            "carreira_minima": "Tempo mínimo na carreira",
+            "cargo_minimo": "Tempo mínimo no cargo",
+        }
+        return traducoes.get(chave, chave.replace("_", " ").capitalize())
+
     def _exibir_resultados(self, resultados):
         st.subheader("Resultado da prévia")
 
+        total_regras = len(resultados)
+        regras_cumpridas = sum(1 for r in resultados if r.cumpriu)
+        regras_nao_cumpridas = total_regras - regras_cumpridas
+
+        col2, col3 = st.columns(2)
+
+        col2.metric("Regras cumpridas", regras_cumpridas)
+        col3.metric("Regras não cumpridas", regras_nao_cumpridas)
+
+        st.divider()
+
         for resultado in resultados:
-            with st.expander(resultado.nome, expanded=True):
+            with st.container(border=True):
                 if resultado.cumpriu:
-                    st.success("Regra cumprida.")
+                    st.markdown(f"### ✅ {resultado.nome}")
+                    st.success("Esta regra foi cumprida.")
                 else:
-                    st.warning("Regra não cumprida.")
+                    st.markdown(f"### ⚠️ {resultado.nome}")
+                    st.warning("Esta regra ainda não foi cumprida.")
 
-                st.write("**Valores apurados:**")
-                st.json(resultado.valores_apurados)
+                col1, col2 = st.columns(2)
 
-                st.write("**Requisitos:**")
-                st.json(resultado.requisitos)
+                with col1:
+                    st.markdown("#### Valores apurados")
+                    for chave, valor in resultado.valores_apurados.items():
+                        st.write(f"**{self._formatar_chave(chave)}:** {valor}")
+
+                with col2:
+                    st.markdown("#### Requisitos")
+                    for chave, valor in resultado.requisitos.items():
+                        st.write(f"**{self._formatar_chave(chave)}:** {valor}")
 
                 if resultado.pendencias:
-                    st.write("**Pendências:**")
+                    st.markdown("#### O que falta cumprir")
                     for pendencia in resultado.pendencias:
-                        st.write(f"- {pendencia}")
+                        st.write(f"• {pendencia}")
                 else:
-                    st.write("Nenhuma pendência identificada.")
+                    st.success("Não há pendências para esta regra.")
 
                 if resultado.observacoes:
-                    st.write("**Observações:**")
-                    for observacao in resultado.observacoes:
-                        st.write(f"- {observacao}")
+                    with st.expander("Ver observações"):
+                        for observacao in resultado.observacoes:
+                            st.write(f"• {observacao}")
 
 
 if __name__ == "__main__":

@@ -36,8 +36,16 @@ def exibir_cabecalho():
 
 def tela_login():
     exibir_cabecalho()
-    #st.title("Login")
     st.subheader("Login")
+
+    st.markdown("""
+        <style>
+            div[data-testid="stTextInput"] {
+                max-width: 350px;
+            }
+        </style>
+    """, unsafe_allow_html=True)
+
     usuario = st.text_input("Usuário:")
     senha = st.text_input("Senha", type="password")
 
@@ -75,7 +83,6 @@ st.set_page_config(
     page_title="Prévia de Aposentadoria",
     layout="wide"
 )
-
 
 class AppPreviaAposentadoria:
     def __init__(self):
@@ -286,8 +293,6 @@ class AppPreviaAposentadoria:
     def _formatar_chave(self, chave: str) -> str:
         traducoes = {
             "idade": "Idade",
-            #"sexo": "Sexo",
-            #"data_nascimento": "Data de nascimento",
             "anos_efetivo_exercicio": "Anos de efetivo exercício",
             "anos_contribuicao_externa": "Anos de contribuição externa",
             "anos_total_contribuicao": "Tempo total de contribuição",
@@ -296,10 +301,11 @@ class AppPreviaAposentadoria:
 
             "idade_minima": "Idade mínima",
             "contribuicao_minima": "Tempo mínimo de contribuição",
-            "tempo_minimo_cargo": "Tempo mínimo no cargo",
             "servico_publico_minimo": "Tempo mínimo de serviço público",
             "carreira_minima": "Tempo mínimo na carreira",
             "cargo_minimo": "Tempo mínimo no cargo",
+            "data_limite_ingresso": "Data limite de ingresso no serviço público",
+            "idade_compulsoria": "Idade para aposentadoria compulsória",
         }
         return traducoes.get(chave, chave.replace("_", " ").capitalize())
 

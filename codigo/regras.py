@@ -93,7 +93,8 @@ class RegraDireitoAdquirido(RegraAposentadoria):
             pendencias=pendencias,
             observacoes=[
                 "Previsão ilustrativa da regra.",
-                "Necessária validação jurídica e previdenciária."
+                "Necessária validação jurídica e previdenciária.",
+                "Base Legal: Emenda Constitucional nº 104 de 2020."
             ]
         )
     
@@ -111,8 +112,8 @@ class RegraGeral(RegraAposentadoria):
             idade_minima = 65     
         
         contribuicao_minima = 25        
-        tempo_minimo_servico_publico = 10
-        tempo_minimo_cargo = 5
+        servico_publico_minimo = 10
+        cargo_minimo = 5
 
         pendencias = []
 
@@ -128,14 +129,14 @@ class RegraGeral(RegraAposentadoria):
                 f"Faltam {faltam} anos de contribuição."
             )
         
-        if dados_tempo.anos_efetivo_exercicio < tempo_minimo_servico_publico:
-            faltam = tempo_minimo_servico_publico - dados_tempo.anos_efetivo_exercicio
+        if dados_tempo.anos_efetivo_exercicio < servico_publico_minimo:
+            faltam = servico_publico_minimo - dados_tempo.anos_efetivo_exercicio
             pendencias.append(
                 f"Faltam {faltam} anos de serviço público."
             )
         
-        if dados_tempo.anos_no_cargo < tempo_minimo_cargo:
-            faltam = tempo_minimo_cargo < dados_tempo.anos_no_cargo
+        if dados_tempo.anos_no_cargo < cargo_minimo:
+            faltam = cargo_minimo - dados_tempo.anos_no_cargo
             pendencias.append(
                 f"Faltam {faltam} anos no cargo."
             )
@@ -149,8 +150,8 @@ class RegraGeral(RegraAposentadoria):
             requisitos={
                 "idade_minima": idade_minima,
                 "contribuicao_minima": contribuicao_minima,
-                "tempo_minimo_servico_publico": tempo_minimo_servico_publico,
-                "tempo_minimo_cargo": tempo_minimo_cargo
+                "servico_publico_minimo": servico_publico_minimo,
+                "cargo_minimo": cargo_minimo
             },
             valores_apurados={
                 "idade": servidor.idade,
@@ -162,6 +163,41 @@ class RegraGeral(RegraAposentadoria):
             observacoes=[
                 "Previsão ilustrativa da regra.",
                 "Para se aposentar pelas regras permanentes, é necessário que o servidor cumpra cumulativamente todas as exigências.",
+                "Base legal: Lei Complementar nº 64 de 2002.",
+            ]
+        )
+
+class RegraCompulsoria(RegraAposentadoria):
+    def __init__(self):
+        super().__init__(
+            codigo="REGRA_COMPULSORIA",
+            nome="Regra de Aposentadoria Compulsória"
+        )
+
+    def avaliar(self, servidor: Servidor, dados_tempo: DadosTempo) -> ResultadoRegra:
+        idade_compulsoria = 75
+        pendencias = []
+
+        if servidor.idade < idade_compulsoria:
+            faltam = idade_compulsoria - servidor.idade
+            pendencias.append(
+                f"Faltam {faltam} anos para a aposentadoria compulsória."
+            )
+
+        return ResultadoRegra(
+            codigo=self.codigo,
+            nome=self.nome,
+            cumpriu=len(pendencias) == 0,
+            requisitos={
+                "idade_compulsoria": idade_compulsoria
+            },
+            valores_apurados={
+                "idade": servidor.idade
+            },
+            pendencias=pendencias,
+            observacoes=[
+                "Previsão ilustrativa da regra.",
+                "Base legal: Constituição Federal, Art. 40, §1º, III."
             ]
         )
 

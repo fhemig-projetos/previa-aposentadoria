@@ -19,6 +19,9 @@ build/
 
 # Arquivos
 .xlsx
+.json
+
 output/
+dados/
 
 .streamlit/secrets.toml

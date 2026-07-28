@@ -5,6 +5,8 @@ from .repositorio import RepositorioServidores
 from .regras import RegraAposentadoria
 from .regras import RegraDireitoAdquirido
 from .regras import RegraGeral
+from .regras import RegraCompulsoria
+#from .regras import RegraPontos
 from .simulador import SimuladorAposentadoria
 from .gerador_pdf import PDFGenerator
 from .converter_json import converter_excel_para_json

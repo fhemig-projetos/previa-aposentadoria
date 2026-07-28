@@ -286,7 +286,7 @@ class PDFGenerator:
                             estilo_celula
                         ),
                         Paragraph(
-                            f"{self._formatar_chave(chave_valor)}: {valor_apurado}" if chave_valor else "-",
+                            f"<b>{self._formatar_chave(chave_valor)}:</b> {valor_apurado}" if chave_valor else "-",
                             estilo_celula
                         ),
                     ]

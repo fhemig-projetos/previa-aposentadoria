@@ -1,13 +1,35 @@
+from pathlib import Path
+
 import pandas as pd
-from datetime import datetime
+
 from codigo import Servidor
 
 
 class RepositorioServidores:
-    def __init__(self, caminho_excel: str):
-        self.caminho_excel = caminho_excel
-        self.df = pd.read_json(caminho_excel, dtype={"masp": str})
-        #self.df = pd.read_excel(caminho_excel, dtype={"MASP": str, "ADM": str})
+    def __init__(self, caminho_dados: str | Path):
+        self.caminho_dados = Path(caminho_dados)
+        self.df = self._carregar_dataframe()
+
+    def _carregar_dataframe(self) -> pd.DataFrame:
+        if not self.caminho_dados.exists():
+            raise FileNotFoundError(
+                f"Arquivo de dados não encontrado: {self.caminho_dados}"
+            )
+
+        extensao = self.caminho_dados.suffix.lower()
+
+        if extensao == ".json":
+            return pd.read_json(self.caminho_dados, dtype={"MASP": str})
+
+        if extensao == ".xlsx":
+            return pd.read_excel(
+                self.caminho_dados,
+                sheet_name=0,
+                engine="openpyxl",
+                dtype={"MASP": str, "ADM": str},
+            )
+
+        raise ValueError(f"Formato não suportado: {self.caminho_dados}")
 
     def buscar_por_masp_adm(self, masp: str, adm: str) -> Servidor | None:
         masp_adm_busca = f"{masp}{adm}"

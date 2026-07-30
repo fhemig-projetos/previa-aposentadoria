@@ -18,7 +18,8 @@ build/
 .env
 
 # Arquivos
-.xlsx
+*.xlsx
+
 output/
 
 .streamlit/secrets.toml

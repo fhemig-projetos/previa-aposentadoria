@@ -9,7 +9,6 @@ from .regras import RegraCompulsoria
 #from .regras import RegraPontos
 from .simulador import SimuladorAposentadoria
 from .gerador_pdf import PDFGenerator
-from .converter_json import converter_excel_para_json
 
 
 #python -c "import shutil; shutil.rmtree('__pycache__', ignore_errors=True); shutil.rmtree('codigo/__pycache__', ignore_errors=True)"

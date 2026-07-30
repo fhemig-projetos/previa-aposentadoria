@@ -200,7 +200,7 @@
         "Cod Sexo":"M",
         "Cod Carreira":"TOS",
         "Categoria Profissional\/Ocupação":"TECNICO EM RADIOLOGIA",
-        "Situação Servidor":"DISP\/ADJUNCAO COM ONUS- ORIGEM",
+        "Situação Servidor":"ATIVO",
         "Data Exercício":"1990-08-01T00:00:00.000"
     },
     {
@@ -212,7 +212,7 @@
         "Cod Sexo":"F",
         "Cod Carreira":"TOS",
         "Categoria Profissional\/Ocupação":"AUXILIAR ADMINISTRATIVO",
-        "Situação Servidor":"DISP\/ADJUNCAO COM ONUS- ORIGEM",
+        "Situação Servidor":"ATIVO",
         "Data Exercício":"1990-08-01T00:00:00.000"
     },
     {
@@ -224,7 +224,7 @@
         "Cod Sexo":"F",
         "Cod Carreira":"PENF",
         "Categoria Profissional\/Ocupação":"TECNICO DE ENFERMAGEM",
-        "Situação Servidor":"ATIVO",
+        "Situação Servidor":"EM PROCESSO DE APOSENTADORIA",
         "Data Exercício":"1990-08-01T00:00:00.000"
     },
     {
@@ -540,6 +540,18 @@
         "Data Exercício":"1992-09-21T00:00:00.000"
     },
     {
+        "Masp\/Admissão":103761501,
+        "MASP":10376150,
+        "Nº Admissão":1,
+        "Nome Servidor":"ANTONIO LUIZ SIQUEIRA MAGALHAES FERREIRA",
+        "Data Completa":"1963-07-13T00:00:00.000",
+        "Cod Sexo":"M",
+        "Cod Carreira":"MED",
+        "Categoria Profissional\/Ocupação":"MEDICO CIRURGIAO GERAL",
+        "Situação Servidor":"ATIVO",
+        "Data Exercício":"1992-09-21T00:00:00.000"
+    },
+    {
         "Masp\/Admissão":103767131,
         "MASP":10376713,
         "Nº Admissão":1,
@@ -572,18 +584,6 @@
         "Cod Sexo":"M",
         "Cod Carreira":"AUAS",
         "Categoria Profissional\/Ocupação":"AUXILIAR DE PATOLOGIA CLINICA",
-        "Situação Servidor":"ATIVO",
-        "Data Exercício":"1990-08-01T00:00:00.000"
-    },
-    {
-        "Masp\/Admissão":103769371,
-        "MASP":10376937,
-        "Nº Admissão":1,
-        "Nome Servidor":"ANISIO RODRIGUES MARQUES",
-        "Data Completa":"1959-03-18T00:00:00.000",
-        "Cod Sexo":"M",
-        "Cod Carreira":"PENF",
-        "Categoria Profissional\/Ocupação":"ENFERMEIRO",
         "Situação Servidor":"ATIVO",
         "Data Exercício":"1990-08-01T00:00:00.000"
     },
@@ -670,18 +670,6 @@
         "Categoria Profissional\/Ocupação":"TECNICO EM PATOLOGIA CLINICA",
         "Situação Servidor":"ATIVO",
         "Data Exercício":"1992-09-23T00:00:00.000"
-    },
-    {
-        "Masp\/Admissão":103773641,
-        "MASP":10377364,
-        "Nº Admissão":1,
-        "Nome Servidor":"JORGE EUSTAQUIO DE PAULA",
-        "Data Completa":"1951-06-18T00:00:00.000",
-        "Cod Sexo":"M",
-        "Cod Carreira":"PENF",
-        "Categoria Profissional\/Ocupação":"TECNICO DE ENFERMAGEM",
-        "Situação Servidor":"EM PROCESSO DE APOSENTADORIA",
-        "Data Exercício":"1990-08-01T00:00:00.000"
     },
     {
         "Masp\/Admissão":103775131,
@@ -1089,18 +1077,6 @@
         "Cod Carreira":"PENF",
         "Categoria Profissional\/Ocupação":"TECNICO DE ENFERMAGEM",
         "Situação Servidor":"ATIVO",
-        "Data Exercício":"1990-08-01T00:00:00.000"
-    },
-    {
-        "Masp\/Admissão":103836691,
-        "MASP":10383669,
-        "Nº Admissão":1,
-        "Nome Servidor":"RAIMUNDA AUXILIADORA DE FATIMA SANTOS",
-        "Data Completa":"1955-05-24T00:00:00.000",
-        "Cod Sexo":"F",
-        "Cod Carreira":"AUAS",
-        "Categoria Profissional\/Ocupação":"AUXILIAR TECNICO DE RADIOLOGIA",
-        "Situação Servidor":"EM PROCESSO DE APOSENTADORIA",
         "Data Exercício":"1990-08-01T00:00:00.000"
     },
     {
@@ -1820,7 +1796,7 @@
         "Cod Sexo":"F",
         "Cod Carreira":"TOS",
         "Categoria Profissional\/Ocupação":"AUXILIAR ADMINISTRATIVO",
-        "Situação Servidor":"ATIVO",
+        "Situação Servidor":"EM PROCESSO DE APOSENTADORIA",
         "Data Exercício":"1994-06-10T00:00:00.000"
     },
     {
@@ -2448,18 +2424,6 @@
         "Data Exercício":"1994-06-10T00:00:00.000"
     },
     {
-        "Masp\/Admissão":103991371,
-        "MASP":10399137,
-        "Nº Admissão":1,
-        "Nome Servidor":"HELENA MARIA",
-        "Data Completa":"1959-01-25T00:00:00.000",
-        "Cod Sexo":"F",
-        "Cod Carreira":"PENF",
-        "Categoria Profissional\/Ocupação":"TECNICO DE ENFERMAGEM",
-        "Situação Servidor":"EM PROCESSO DE APOSENTADORIA",
-        "Data Exercício":"1990-08-01T00:00:00.000"
-    },
-    {
         "Masp\/Admissão":103991861,
         "MASP":10399186,
         "Nº Admissão":1,
@@ -2664,6 +2628,30 @@
         "Data Exercício":"1990-08-01T00:00:00.000"
     },
     {
+        "Masp\/Admissão":104010241,
+        "MASP":10401024,
+        "Nº Admissão":1,
+        "Nome Servidor":"ALMIR MEGALI FILHO",
+        "Data Completa":"1959-02-27T00:00:00.000",
+        "Cod Sexo":"M",
+        "Cod Carreira":"MED",
+        "Categoria Profissional\/Ocupação":"MEDICO CIRURGIAO GERAL",
+        "Situação Servidor":"EM PROCESSO DE APOSENTADORIA",
+        "Data Exercício":"1990-08-01T00:00:00.000"
+    },
+    {
+        "Masp\/Admissão":104010571,
+        "MASP":10401057,
+        "Nº Admissão":1,
+        "Nome Servidor":"EDUARDO LUIZ NIGRI DOS SANTOS",
+        "Data Completa":"1960-05-28T00:00:00.000",
+        "Cod Sexo":"M",
+        "Cod Carreira":"MED",
+        "Categoria Profissional\/Ocupação":"MEDICO CIRURGIAO GERAL",
+        "Situação Servidor":"EM PROCESSO DE APOSENTADORIA",
+        "Data Exercício":"1990-08-01T00:00:00.000"
+    },
+    {
         "Masp\/Admissão":104011641,
         "MASP":10401164,
         "Nº Admissão":1,
@@ -2698,6 +2686,30 @@
         "Categoria Profissional\/Ocupação":"FISIOTERAPEUTA",
         "Situação Servidor":"DISP\/ADJUNCAO COM ONUS- ORIGEM",
         "Data Exercício":"1992-09-25T00:00:00.000"
+    },
+    {
+        "Masp\/Admissão":104013961,
+        "MASP":10401396,
+        "Nº Admissão":1,
+        "Nome Servidor":"CLAUDIO SALUM CASTRO",
+        "Data Completa":"1956-04-18T00:00:00.000",
+        "Cod Sexo":"M",
+        "Cod Carreira":"MED",
+        "Categoria Profissional\/Ocupação":"MEDICO CIRURGIAO PLASTICO",
+        "Situação Servidor":"EM PROCESSO DE APOSENTADORIA",
+        "Data Exercício":"1990-08-01T00:00:00.000"
+    },
+    {
+        "Masp\/Admissão":104014381,
+        "MASP":10401438,
+        "Nº Admissão":1,
+        "Nome Servidor":"DARLAN PEREIRA DA SILVA",
+        "Data Completa":"1958-04-15T00:00:00.000",
+        "Cod Sexo":"M",
+        "Cod Carreira":"AGAS",
+        "Categoria Profissional\/Ocupação":"ASSISTENTE SOCIAL",
+        "Situação Servidor":"ATIVO",
+        "Data Exercício":"1990-08-01T00:00:00.000"
     },
     {
         "Masp\/Admissão":104017011,
@@ -2745,18 +2757,6 @@
         "Cod Carreira":"MED",
         "Categoria Profissional\/Ocupação":"MEDICO CLINICO",
         "Situação Servidor":"ATIVO",
-        "Data Exercício":"1990-08-01T00:00:00.000"
-    },
-    {
-        "Masp\/Admissão":104020551,
-        "MASP":10402055,
-        "Nº Admissão":1,
-        "Nome Servidor":"VASCO DE OLIVEIRA ARAUJO",
-        "Data Completa":"1951-06-18T00:00:00.000",
-        "Cod Sexo":"M",
-        "Cod Carreira":"AGAS",
-        "Categoria Profissional\/Ocupação":"ODONTOLOGO",
-        "Situação Servidor":"EM PROCESSO DE APOSENTADORIA",
         "Data Exercício":"1990-08-01T00:00:00.000"
     },
     {
@@ -2892,6 +2892,18 @@
         "Data Exercício":"1991-08-29T00:00:00.000"
     },
     {
+        "Masp\/Admissão":104026421,
+        "MASP":10402642,
+        "Nº Admissão":1,
+        "Nome Servidor":"GUILHERME FREIRE GARCIA",
+        "Data Completa":"1960-09-30T00:00:00.000",
+        "Cod Sexo":"M",
+        "Cod Carreira":"MED",
+        "Categoria Profissional\/Ocupação":"MEDICO CLINICO",
+        "Situação Servidor":"ATIVO",
+        "Data Exercício":"1990-08-01T00:00:00.000"
+    },
+    {
         "Masp\/Admissão":104029151,
         "MASP":10402915,
         "Nº Admissão":1,
@@ -2901,18 +2913,6 @@
         "Cod Carreira":"AUAS",
         "Categoria Profissional\/Ocupação":"COZINHEIRO",
         "Situação Servidor":"ATIVO",
-        "Data Exercício":"1990-08-01T00:00:00.000"
-    },
-    {
-        "Masp\/Admissão":104029491,
-        "MASP":10402949,
-        "Nº Admissão":1,
-        "Nome Servidor":"GLAUCIA MARIA SCOTTI",
-        "Data Completa":"1962-05-23T00:00:00.000",
-        "Cod Sexo":"F",
-        "Cod Carreira":"PENF",
-        "Categoria Profissional\/Ocupação":"ENFERMEIRO",
-        "Situação Servidor":"EM PROCESSO DE APOSENTADORIA",
         "Data Exercício":"1990-08-01T00:00:00.000"
     },
     {
@@ -3780,18 +3780,6 @@
         "Data Exercício":"1990-08-01T00:00:00.000"
     },
     {
-        "Masp\/Admissão":104061481,
-        "MASP":10406148,
-        "Nº Admissão":1,
-        "Nome Servidor":"MARCIA SILVANA DOMINGOS",
-        "Data Completa":"1962-06-12T00:00:00.000",
-        "Cod Sexo":"F",
-        "Cod Carreira":"PENF",
-        "Categoria Profissional\/Ocupação":"AUXILIAR DE ENFERMAGEM",
-        "Situação Servidor":"ATIVO",
-        "Data Exercício":"1992-09-25T00:00:00.000"
-    },
-    {
         "Masp\/Admissão":104062051,
         "MASP":10406205,
         "Nº Admissão":1,
@@ -4448,7 +4436,7 @@
         "Cod Sexo":"F",
         "Cod Carreira":"AUAS",
         "Categoria Profissional\/Ocupação":"CIRCULANTE DE ENFERMAGEM",
-        "Situação Servidor":"ATIVO",
+        "Situação Servidor":"EM PROCESSO DE APOSENTADORIA",
         "Data Exercício":"1990-08-01T00:00:00.000"
     },
     {
@@ -4485,18 +4473,6 @@
         "Cod Carreira":"AUAS",
         "Categoria Profissional\/Ocupação":"LAVADEIRO",
         "Situação Servidor":"ATIVO",
-        "Data Exercício":"1990-08-01T00:00:00.000"
-    },
-    {
-        "Masp\/Admissão":104082431,
-        "MASP":10408243,
-        "Nº Admissão":1,
-        "Nome Servidor":"ROBSON LUIZ RODRIGUES",
-        "Data Completa":"1963-05-15T00:00:00.000",
-        "Cod Sexo":"M",
-        "Cod Carreira":"AUAS",
-        "Categoria Profissional\/Ocupação":"AUXILIAR DE ALMOXARIFE",
-        "Situação Servidor":"EM PROCESSO DE APOSENTADORIA",
         "Data Exercício":"1990-08-01T00:00:00.000"
     },
     {
@@ -5256,18 +5232,6 @@
         "Data Exercício":"1990-08-01T00:00:00.000"
     },
     {
-        "Masp\/Admissão":104111221,
-        "MASP":10411122,
-        "Nº Admissão":1,
-        "Nome Servidor":"HELOISA HELENA RODRIGUES",
-        "Data Completa":"1953-05-01T00:00:00.000",
-        "Cod Sexo":"F",
-        "Cod Carreira":"PENF",
-        "Categoria Profissional\/Ocupação":"AUXILIAR DE ENFERMAGEM",
-        "Situação Servidor":"EM PROCESSO DE APOSENTADORIA",
-        "Data Exercício":"1990-08-01T00:00:00.000"
-    },
-    {
         "Masp\/Admissão":104111631,
         "MASP":10411163,
         "Nº Admissão":1,
@@ -5397,18 +5361,6 @@
         "Cod Carreira":"MED",
         "Categoria Profissional\/Ocupação":"MEDICO EM RADIOLOG.E DIAGNOST.POR IMAGEM",
         "Situação Servidor":"ATIVO",
-        "Data Exercício":"1990-08-01T00:00:00.000"
-    },
-    {
-        "Masp\/Admissão":104117671,
-        "MASP":10411767,
-        "Nº Admissão":1,
-        "Nome Servidor":"MARIA GERALDA DELFINO CUSTODIO",
-        "Data Completa":"1958-05-13T00:00:00.000",
-        "Cod Sexo":"F",
-        "Cod Carreira":"PENF",
-        "Categoria Profissional\/Ocupação":"AUXILIAR DE ENFERMAGEM",
-        "Situação Servidor":"EM PROCESSO DE APOSENTADORIA",
         "Data Exercício":"1990-08-01T00:00:00.000"
     },
     {
@@ -5782,6 +5734,18 @@
         "Categoria Profissional\/Ocupação":"TECNICO EM PATOLOGIA CLINICA",
         "Situação Servidor":"ATIVO",
         "Data Exercício":"2008-09-26T00:00:00.000"
+    },
+    {
+        "Masp\/Admissão":104138701,
+        "MASP":10413870,
+        "Nº Admissão":1,
+        "Nome Servidor":"WILSON ROCHA FILHO",
+        "Data Completa":"1955-10-07T00:00:00.000",
+        "Cod Sexo":"M",
+        "Cod Carreira":"MED",
+        "Categoria Profissional\/Ocupação":"MEDICO CLINICO",
+        "Situação Servidor":"EM PROCESSO DE APOSENTADORIA",
+        "Data Exercício":"1990-08-01T00:00:00.000"
     },
     {
         "Masp\/Admissão":104139531,
@@ -6360,6 +6324,18 @@
         "Data Exercício":"1992-02-21T00:00:00.000"
     },
     {
+        "Masp\/Admissão":104162381,
+        "MASP":10416238,
+        "Nº Admissão":1,
+        "Nome Servidor":"JOAO AUGUSTO OLIVEIRA FERNANDES",
+        "Data Completa":"1961-11-09T00:00:00.000",
+        "Cod Sexo":"M",
+        "Cod Carreira":"MED",
+        "Categoria Profissional\/Ocupação":"MEDICO OBSTETRA",
+        "Situação Servidor":"ATIVO",
+        "Data Exercício":"1992-02-21T00:00:00.000"
+    },
+    {
         "Masp\/Admissão":104163292,
         "MASP":10416329,
         "Nº Admissão":2,
@@ -6456,6 +6432,18 @@
         "Data Exercício":"1992-02-21T00:00:00.000"
     },
     {
+        "Masp\/Admissão":104177561,
+        "MASP":10417756,
+        "Nº Admissão":1,
+        "Nome Servidor":"DEBORA CORREA TEIXEIRA",
+        "Data Completa":"1962-07-21T00:00:00.000",
+        "Cod Sexo":"F",
+        "Cod Carreira":"MED",
+        "Categoria Profissional\/Ocupação":"MEDICO CLINICO",
+        "Situação Servidor":"ATIVO",
+        "Data Exercício":"1992-09-18T00:00:00.000"
+    },
+    {
         "Masp\/Admissão":104177641,
         "MASP":10417764,
         "Nº Admissão":1,
@@ -6492,6 +6480,18 @@
         "Data Exercício":"1992-09-18T00:00:00.000"
     },
     {
+        "Masp\/Admissão":104178301,
+        "MASP":10417830,
+        "Nº Admissão":1,
+        "Nome Servidor":"MARIA DO CARMO",
+        "Data Completa":"1959-07-16T00:00:00.000",
+        "Cod Sexo":"F",
+        "Cod Carreira":"MED",
+        "Categoria Profissional\/Ocupação":"MEDICO CLINICO",
+        "Situação Servidor":"EM PROCESSO DE APOSENTADORIA",
+        "Data Exercício":"1992-09-21T00:00:00.000"
+    },
+    {
         "Masp\/Admissão":104179051,
         "MASP":10417905,
         "Nº Admissão":1,
@@ -6524,7 +6524,7 @@
         "Cod Sexo":"M",
         "Cod Carreira":"MED",
         "Categoria Profissional\/Ocupação":"MEDICO CLINICO",
-        "Situação Servidor":"EM PROCESSO DE APOSENTADORIA",
+        "Situação Servidor":"ATIVO",
         "Data Exercício":"1992-12-10T00:00:00.000"
     },
     {
@@ -6658,6 +6658,18 @@
         "Categoria Profissional\/Ocupação":"TECNICO DE ENFERMAGEM",
         "Situação Servidor":"ATIVO",
         "Data Exercício":"1992-11-25T00:00:00.000"
+    },
+    {
+        "Masp\/Admissão":104182831,
+        "MASP":10418283,
+        "Nº Admissão":1,
+        "Nome Servidor":"IBSEN CARVALHO GUIMARAES",
+        "Data Completa":"1959-01-16T00:00:00.000",
+        "Cod Sexo":"M",
+        "Cod Carreira":"MED",
+        "Categoria Profissional\/Ocupação":"MEDICO PSIQUIATRA",
+        "Situação Servidor":"ATIVO",
+        "Data Exercício":"1992-12-30T00:00:00.000"
     },
     {
         "Masp\/Admissão":104183171,
@@ -6804,18 +6816,6 @@
         "Data Exercício":"1994-04-14T00:00:00.000"
     },
     {
-        "Masp\/Admissão":104224911,
-        "MASP":10422491,
-        "Nº Admissão":1,
-        "Nome Servidor":"ELIZIA ROSA",
-        "Data Completa":"1952-09-15T00:00:00.000",
-        "Cod Sexo":"F",
-        "Cod Carreira":"PENF",
-        "Categoria Profissional\/Ocupação":"TECNICO DE ENFERMAGEM",
-        "Situação Servidor":"EM PROCESSO DE APOSENTADORIA",
-        "Data Exercício":"1994-05-04T00:00:00.000"
-    },
-    {
         "Masp\/Admissão":104225331,
         "MASP":10422533,
         "Nº Admissão":1,
@@ -6850,18 +6850,6 @@
         "Categoria Profissional\/Ocupação":"MEDICO OTORRINOLARINGOLOGISTA",
         "Situação Servidor":"ATIVO",
         "Data Exercício":"1994-06-15T00:00:00.000"
-    },
-    {
-        "Masp\/Admissão":104226321,
-        "MASP":10422632,
-        "Nº Admissão":1,
-        "Nome Servidor":"JOSE ANDRE ROSA DO NASCIMENTO",
-        "Data Completa":"1965-03-25T00:00:00.000",
-        "Cod Sexo":"M",
-        "Cod Carreira":"PENF",
-        "Categoria Profissional\/Ocupação":"TECNICO DE ENFERMAGEM",
-        "Situação Servidor":"ATIVO",
-        "Data Exercício":"1994-04-22T00:00:00.000"
     },
     {
         "Masp\/Admissão":104226571,
@@ -6933,18 +6921,6 @@
         "Cod Carreira":"PENF",
         "Categoria Profissional\/Ocupação":"TECNICO DE ENFERMAGEM",
         "Situação Servidor":"ATIVO",
-        "Data Exercício":"1994-05-02T00:00:00.000"
-    },
-    {
-        "Masp\/Admissão":104228061,
-        "MASP":10422806,
-        "Nº Admissão":1,
-        "Nome Servidor":"MARIA DE FATIMA LOPES FURTADO",
-        "Data Completa":"1964-10-10T00:00:00.000",
-        "Cod Sexo":"F",
-        "Cod Carreira":"MED",
-        "Categoria Profissional\/Ocupação":"MEDICO PSIQUIATRA",
-        "Situação Servidor":"EM PROCESSO DE APOSENTADORIA",
         "Data Exercício":"1994-05-02T00:00:00.000"
     },
     {
@@ -7416,6 +7392,18 @@
         "Data Exercício":"2004-10-01T00:00:00.000"
     },
     {
+        "Masp\/Admissão":104239601,
+        "MASP":10423960,
+        "Nº Admissão":1,
+        "Nome Servidor":"MARCIA HELENA DE JESUS CELESTE DE SOUZA",
+        "Data Completa":"1966-01-26T00:00:00.000",
+        "Cod Sexo":"F",
+        "Cod Carreira":"TOS",
+        "Categoria Profissional\/Ocupação":"TECNICO EM PATOLOGIA CLINICA",
+        "Situação Servidor":"ATIVO",
+        "Data Exercício":"1994-04-29T00:00:00.000"
+    },
+    {
         "Masp\/Admissão":104239781,
         "MASP":10423978,
         "Nº Admissão":1,
@@ -7486,6 +7474,18 @@
         "Categoria Profissional\/Ocupação":"TECNICO DE ENFERMAGEM",
         "Situação Servidor":"ATIVO",
         "Data Exercício":"1994-06-02T00:00:00.000"
+    },
+    {
+        "Masp\/Admissão":104242991,
+        "MASP":10424299,
+        "Nº Admissão":1,
+        "Nome Servidor":"ANA MARIA MARRA",
+        "Data Completa":"1966-12-03T00:00:00.000",
+        "Cod Sexo":"F",
+        "Cod Carreira":"TOS",
+        "Categoria Profissional\/Ocupação":"AUXILIAR ADMINISTRATIVO",
+        "Situação Servidor":"ATIVO",
+        "Data Exercício":"1994-05-05T00:00:00.000"
     },
     {
         "Masp\/Admissão":104243151,
@@ -7944,6 +7944,18 @@
         "Data Exercício":"2011-05-19T00:00:00.000"
     },
     {
+        "Masp\/Admissão":104255021,
+        "MASP":10425502,
+        "Nº Admissão":1,
+        "Nome Servidor":"MARISTELA MARCIA MENEGHIN",
+        "Data Completa":"1966-10-21T00:00:00.000",
+        "Cod Sexo":"F",
+        "Cod Carreira":"MED",
+        "Categoria Profissional\/Ocupação":"MEDICO CLINICO",
+        "Situação Servidor":"ATIVO",
+        "Data Exercício":"1994-05-02T00:00:00.000"
+    },
+    {
         "Masp\/Admissão":104255101,
         "MASP":10425510,
         "Nº Admissão":1,
@@ -7990,6 +8002,18 @@
         "Categoria Profissional\/Ocupação":"MEDICO OTORRINOLARINGOLOGISTA",
         "Situação Servidor":"DISP\/ADJUNCAO COM ONUS- ORIGEM",
         "Data Exercício":"1994-05-02T00:00:00.000"
+    },
+    {
+        "Masp\/Admissão":104256501,
+        "MASP":10425650,
+        "Nº Admissão":1,
+        "Nome Servidor":"MARGARET LEAO QUADROS",
+        "Data Completa":"1964-11-16T00:00:00.000",
+        "Cod Sexo":"F",
+        "Cod Carreira":"MED",
+        "Categoria Profissional\/Ocupação":"MEDICO ANESTESIOLOGISTA",
+        "Situação Servidor":"ATIVO",
+        "Data Exercício":"1994-04-28T00:00:00.000"
     },
     {
         "Masp\/Admissão":104256841,
@@ -8170,18 +8194,6 @@
         "Categoria Profissional\/Ocupação":"TECNICO DE ENFERMAGEM",
         "Situação Servidor":"ATIVO",
         "Data Exercício":"1994-05-11T00:00:00.000"
-    },
-    {
-        "Masp\/Admissão":104262861,
-        "MASP":10426286,
-        "Nº Admissão":1,
-        "Nome Servidor":"CLEIA SONIA RAMOS DE OLIVEIRA",
-        "Data Completa":"1960-06-23T00:00:00.000",
-        "Cod Sexo":"F",
-        "Cod Carreira":"PENF",
-        "Categoria Profissional\/Ocupação":"TECNICO DE ENFERMAGEM",
-        "Situação Servidor":"EM PROCESSO DE APOSENTADORIA",
-        "Data Exercício":"1994-05-13T00:00:00.000"
     },
     {
         "Masp\/Admissão":104263101,
@@ -8376,6 +8388,18 @@
         "Data Exercício":"1994-05-05T00:00:00.000"
     },
     {
+        "Masp\/Admissão":104268491,
+        "MASP":10426849,
+        "Nº Admissão":1,
+        "Nome Servidor":"ELIANE CRISTINA RODRIGUES DE JESUS",
+        "Data Completa":"1970-04-13T00:00:00.000",
+        "Cod Sexo":"F",
+        "Cod Carreira":"TOS",
+        "Categoria Profissional\/Ocupação":"AUXILIAR ADMINISTRATIVO",
+        "Situação Servidor":"ATIVO",
+        "Data Exercício":"1994-05-11T00:00:00.000"
+    },
+    {
         "Masp\/Admissão":104268981,
         "MASP":10426898,
         "Nº Admissão":1,
@@ -8532,18 +8556,6 @@
         "Data Exercício":"1994-06-10T00:00:00.000"
     },
     {
-        "Masp\/Admissão":104272351,
-        "MASP":10427235,
-        "Nº Admissão":1,
-        "Nome Servidor":"DILCE REGINA DOS SANTOS",
-        "Data Completa":"1955-07-23T00:00:00.000",
-        "Cod Sexo":"F",
-        "Cod Carreira":"PENF",
-        "Categoria Profissional\/Ocupação":"AUXILIAR DE ENFERMAGEM",
-        "Situação Servidor":"EM PROCESSO DE APOSENTADORIA",
-        "Data Exercício":"1994-06-10T00:00:00.000"
-    },
-    {
         "Masp\/Admissão":104272431,
         "MASP":10427243,
         "Nº Admissão":1,
@@ -8657,6 +8669,18 @@
         "Nº Admissão":1,
         "Nome Servidor":"MARCELO ARANTES DORNELOS",
         "Data Completa":"1964-07-24T00:00:00.000",
+        "Cod Sexo":"M",
+        "Cod Carreira":"MED",
+        "Categoria Profissional\/Ocupação":"MEDICO OTORRINOLARINGOLOGISTA",
+        "Situação Servidor":"ATIVO",
+        "Data Exercício":"1994-11-01T00:00:00.000"
+    },
+    {
+        "Masp\/Admissão":104274581,
+        "MASP":10427458,
+        "Nº Admissão":1,
+        "Nome Servidor":"RICARDO LEOPOLDO FONSECA ANDRADE",
+        "Data Completa":"1963-01-07T00:00:00.000",
         "Cod Sexo":"M",
         "Cod Carreira":"MED",
         "Categoria Profissional\/Ocupação":"MEDICO OTORRINOLARINGOLOGISTA",
@@ -8856,6 +8880,18 @@
         "Data Exercício":"1994-12-09T00:00:00.000"
     },
     {
+        "Masp\/Admissão":104279381,
+        "MASP":10427938,
+        "Nº Admissão":1,
+        "Nome Servidor":"CRISTINA DE AGUIAR ARAUJO",
+        "Data Completa":"1968-11-27T00:00:00.000",
+        "Cod Sexo":"F",
+        "Cod Carreira":"AGAS",
+        "Categoria Profissional\/Ocupação":"PSICOLOGO",
+        "Situação Servidor":"ATIVO",
+        "Data Exercício":"1995-01-02T00:00:00.000"
+    },
+    {
         "Masp\/Admissão":104279791,
         "MASP":10427979,
         "Nº Admissão":1,
@@ -8890,6 +8926,18 @@
         "Categoria Profissional\/Ocupação":"TERAPEUTA OCUPACIONAL",
         "Situação Servidor":"ATIVO",
         "Data Exercício":"1994-12-28T00:00:00.000"
+    },
+    {
+        "Masp\/Admissão":104281261,
+        "MASP":10428126,
+        "Nº Admissão":1,
+        "Nome Servidor":"DARLEI SANTOS MARQUES",
+        "Data Completa":"1964-07-11T00:00:00.000",
+        "Cod Sexo":"M",
+        "Cod Carreira":"MED",
+        "Categoria Profissional\/Ocupação":"MEDICO ANESTESIOLOGISTA",
+        "Situação Servidor":"ATIVO",
+        "Data Exercício":"1995-01-02T00:00:00.000"
     },
     {
         "Masp\/Admissão":104281341,
@@ -8950,6 +8998,18 @@
         "Categoria Profissional\/Ocupação":"MEDICO ANESTESIOLOGISTA",
         "Situação Servidor":"ATIVO",
         "Data Exercício":"1995-01-02T00:00:00.000"
+    },
+    {
+        "Masp\/Admissão":104282821,
+        "MASP":10428282,
+        "Nº Admissão":1,
+        "Nome Servidor":"LUIZ ANTONIO MENDES MOREIRA",
+        "Data Completa":"1962-06-23T00:00:00.000",
+        "Cod Sexo":"M",
+        "Cod Carreira":"MED",
+        "Categoria Profissional\/Ocupação":"MEDICO NEUROLOGISTA",
+        "Situação Servidor":"ATIVO",
+        "Data Exercício":"1995-02-01T00:00:00.000"
     },
     {
         "Masp\/Admissão":104283241,
@@ -9372,18 +9432,6 @@
         "Data Exercício":"2002-02-01T00:00:00.000"
     },
     {
-        "Masp\/Admissão":105099251,
-        "MASP":10509925,
-        "Nº Admissão":1,
-        "Nome Servidor":"GERALDO CELSO DE MIRANDA",
-        "Data Completa":"1962-05-10T00:00:00.000",
-        "Cod Sexo":"M",
-        "Cod Carreira":"PENF",
-        "Categoria Profissional\/Ocupação":"TECNICO DE ENFERMAGEM",
-        "Situação Servidor":"EM PROCESSO DE APOSENTADORIA",
-        "Data Exercício":"2002-02-01T00:00:00.000"
-    },
-    {
         "Masp\/Admissão":105099331,
         "MASP":10509933,
         "Nº Admissão":1,
@@ -9490,18 +9538,6 @@
         "Categoria Profissional\/Ocupação":"TECNICO DE ENFERMAGEM",
         "Situação Servidor":"ATIVO",
         "Data Exercício":"2002-02-07T00:00:00.000"
-    },
-    {
-        "Masp\/Admissão":105105921,
-        "MASP":10510592,
-        "Nº Admissão":1,
-        "Nome Servidor":"JOANA RIBEIRO ALVES",
-        "Data Completa":"1957-01-03T00:00:00.000",
-        "Cod Sexo":"F",
-        "Cod Carreira":"PENF",
-        "Categoria Profissional\/Ocupação":"TECNICO DE ENFERMAGEM",
-        "Situação Servidor":"EM PROCESSO DE APOSENTADORIA",
-        "Data Exercício":"2002-02-13T00:00:00.000"
     },
     {
         "Masp\/Admissão":105106001,
@@ -12574,18 +12610,6 @@
         "Categoria Profissional\/Ocupação":"MEDICO PEDIATRA",
         "Situação Servidor":"ATIVO",
         "Data Exercício":"2011-07-11T00:00:00.000"
-    },
-    {
-        "Masp\/Admissão":108619792,
-        "MASP":10861979,
-        "Nº Admissão":2,
-        "Nome Servidor":"ALEX FABIANO DIAS PINTO",
-        "Data Completa":"1966-11-25T00:00:00.000",
-        "Cod Sexo":"M",
-        "Cod Carreira":"MED",
-        "Categoria Profissional\/Ocupação":"MEDICO ORTOPEDISTA E TRAUMATOLOGISTA",
-        "Situação Servidor":"EM PROCESSO DE APOSENTADORIA",
-        "Data Exercício":"2008-06-11T00:00:00.000"
     },
     {
         "Masp\/Admissão":108619953,
@@ -20232,18 +20256,6 @@
         "Data Exercício":"2011-06-21T00:00:00.000"
     },
     {
-        "Masp\/Admissão":109060064,
-        "MASP":10906006,
-        "Nº Admissão":4,
-        "Nome Servidor":"LECI NOGUEIRA BORGES",
-        "Data Completa":"1966-08-13T00:00:00.000",
-        "Cod Sexo":"F",
-        "Cod Carreira":"PENF",
-        "Categoria Profissional\/Ocupação":"TECNICO DE ENFERMAGEM",
-        "Situação Servidor":"EM PROCESSO DE APOSENTADORIA",
-        "Data Exercício":"2014-03-25T00:00:00.000"
-    },
-    {
         "Masp\/Admissão":109060223,
         "MASP":10906022,
         "Nº Admissão":3,
@@ -20793,7 +20805,7 @@
         "Cod Carreira":"AGAS",
         "Categoria Profissional\/Ocupação":"ASSISTENTE SOCIAL",
         "Situação Servidor":"ATIVO",
-        "Data Exercício":"2004-11-26T00:00:00.000"
+        "Data Exercício":"2000-12-16T00:00:00.000"
     },
     {
         "Masp\/Admissão":109097863,
@@ -21370,18 +21382,6 @@
         "Categoria Profissional\/Ocupação":"MEDICO EM MEDICINA INTENSIVA",
         "Situação Servidor":"ATIVO",
         "Data Exercício":"2011-01-03T00:00:00.000"
-    },
-    {
-        "Masp\/Admissão":109118402,
-        "MASP":10911840,
-        "Nº Admissão":2,
-        "Nome Servidor":"IVANILDA PEREIRA DE ARAUJO",
-        "Data Completa":"1965-06-07T00:00:00.000",
-        "Cod Sexo":"F",
-        "Cod Carreira":"PENF",
-        "Categoria Profissional\/Ocupação":"ENFERMEIRO",
-        "Situação Servidor":"EM PROCESSO DE APOSENTADORIA",
-        "Data Exercício":"2004-10-15T00:00:00.000"
     },
     {
         "Masp\/Admissão":109119072,
@@ -22232,7 +22232,7 @@
         "Cod Sexo":"F",
         "Cod Carreira":"TOS",
         "Categoria Profissional\/Ocupação":"AUXILIAR ADMINISTRATIVO",
-        "Situação Servidor":"ATIVO",
+        "Situação Servidor":"EM PROCESSO DE APOSENTADORIA",
         "Data Exercício":"2014-02-03T00:00:00.000"
     },
     {
@@ -25376,7 +25376,7 @@
         "Cod Sexo":"M",
         "Cod Carreira":"PENF",
         "Categoria Profissional\/Ocupação":"AUXILIAR DE ENFERMAGEM",
-        "Situação Servidor":"ATIVO",
+        "Situação Servidor":"EM PROCESSO DE APOSENTADORIA",
         "Data Exercício":"2004-11-03T00:00:00.000"
     },
     {
@@ -29468,7 +29468,7 @@
         "Cod Sexo":"M",
         "Cod Carreira":"MED",
         "Categoria Profissional\/Ocupação":"MEDICO PSIQUIATRA",
-        "Situação Servidor":"ATIVO",
+        "Situação Servidor":"EM PROCESSO DE APOSENTADORIA",
         "Data Exercício":"2005-02-10T00:00:00.000"
     },
     {
@@ -31740,18 +31740,6 @@
         "Data Exercício":"2008-11-01T00:00:00.000"
     },
     {
-        "Masp\/Admissão":112671683,
-        "MASP":11267168,
-        "Nº Admissão":3,
-        "Nome Servidor":"EZIO DELOR DOS SANTOS",
-        "Data Completa":"1960-01-07T00:00:00.000",
-        "Cod Sexo":"M",
-        "Cod Carreira":"MED",
-        "Categoria Profissional\/Ocupação":"MEDICO GINECOLOGISTA",
-        "Situação Servidor":"EM PROCESSO DE APOSENTADORIA",
-        "Data Exercício":"2010-12-23T00:00:00.000"
-    },
-    {
         "Masp\/Admissão":112672263,
         "MASP":11267226,
         "Nº Admissão":3,
@@ -32962,18 +32950,6 @@
         "Categoria Profissional\/Ocupação":"MEDICO CLINICO",
         "Situação Servidor":"ATIVO",
         "Data Exercício":"2022-11-21T00:00:00.000"
-    },
-    {
-        "Masp\/Admissão":113630582,
-        "MASP":11363058,
-        "Nº Admissão":2,
-        "Nome Servidor":"HUDSON BERNARDES DE SOUSA",
-        "Data Completa":"1977-04-24T00:00:00.000",
-        "Cod Sexo":"M",
-        "Cod Carreira":"PENF",
-        "Categoria Profissional\/Ocupação":"TECNICO DE ENFERMAGEM",
-        "Situação Servidor":"EM PROCESSO DE APOSENTADORIA",
-        "Data Exercício":"2013-09-16T00:00:00.000"
     },
     {
         "Masp\/Admissão":113632562,
@@ -38696,7 +38672,7 @@
         "Cod Sexo":"M",
         "Cod Carreira":"MED",
         "Categoria Profissional\/Ocupação":"MEDICO ANESTESIOLOGISTA",
-        "Situação Servidor":"ATIVO",
+        "Situação Servidor":"EM PROCESSO DE APOSENTADORIA",
         "Data Exercício":"2008-05-16T00:00:00.000"
     },
     {
@@ -38878,18 +38854,6 @@
         "Categoria Profissional\/Ocupação":"TECNICO EM PATOLOGIA CLINICA",
         "Situação Servidor":"ATIVO",
         "Data Exercício":"2008-05-15T00:00:00.000"
-    },
-    {
-        "Masp\/Admissão":119847881,
-        "MASP":11984788,
-        "Nº Admissão":1,
-        "Nome Servidor":"DIDIER SILVEIRA CASTELLANO FILHO",
-        "Data Completa":"1964-04-10T00:00:00.000",
-        "Cod Sexo":"M",
-        "Cod Carreira":"MED",
-        "Categoria Profissional\/Ocupação":"MEDICO GINECOLOGISTA E OBSTETRA",
-        "Situação Servidor":"EM PROCESSO DE APOSENTADORIA",
-        "Data Exercício":"2008-05-26T00:00:00.000"
     },
     {
         "Masp\/Admissão":119848041,
@@ -41724,18 +41688,6 @@
         "Data Exercício":"2014-08-22T00:00:00.000"
     },
     {
-        "Masp\/Admissão":120909733,
-        "MASP":12090973,
-        "Nº Admissão":3,
-        "Nome Servidor":"CRISTIANE APARECIDA DE OLIVEIRA",
-        "Data Completa":"1979-10-12T00:00:00.000",
-        "Cod Sexo":"F",
-        "Cod Carreira":"PENF",
-        "Categoria Profissional\/Ocupação":"TECNICO DE ENFERMAGEM",
-        "Situação Servidor":"ATIVO",
-        "Data Exercício":"2014-07-28T00:00:00.000"
-    },
-    {
         "Masp\/Admissão":120918073,
         "MASP":12091807,
         "Nº Admissão":3,
@@ -42250,18 +42202,6 @@
         "Categoria Profissional\/Ocupação":"TECNICO DE ENFERMAGEM",
         "Situação Servidor":"ATIVO",
         "Data Exercício":"2011-08-09T00:00:00.000"
-    },
-    {
-        "Masp\/Admissão":121112663,
-        "MASP":12111266,
-        "Nº Admissão":3,
-        "Nome Servidor":"FREDERICO RAFAEL DO CARMO SILVA",
-        "Data Completa":"1983-05-08T00:00:00.000",
-        "Cod Sexo":"M",
-        "Cod Carreira":"AGAS",
-        "Categoria Profissional\/Ocupação":"FISIOTERAPEUTA",
-        "Situação Servidor":"ATIVO",
-        "Data Exercício":"2012-03-01T00:00:00.000"
     },
     {
         "Masp\/Admissão":121115553,
@@ -43366,18 +43306,6 @@
         "Categoria Profissional\/Ocupação":"TECNICO EM PATOLOGIA CLINICA",
         "Situação Servidor":"ATIVO",
         "Data Exercício":"2008-11-19T00:00:00.000"
-    },
-    {
-        "Masp\/Admissão":121557844,
-        "MASP":12155784,
-        "Nº Admissão":4,
-        "Nome Servidor":"JULIANA DE SOUZA RAJAO DE BRITO",
-        "Data Completa":"1981-08-27T00:00:00.000",
-        "Cod Sexo":"F",
-        "Cod Carreira":"MED",
-        "Categoria Profissional\/Ocupação":"MEDICO PEDIATRA",
-        "Situação Servidor":"ATIVO",
-        "Data Exercício":"2018-12-03T00:00:00.000"
     },
     {
         "Masp\/Admissão":121558004,
@@ -51384,18 +51312,6 @@
         "Data Exercício":"2011-01-03T00:00:00.000"
     },
     {
-        "Masp\/Admissão":127059352,
-        "MASP":12705935,
-        "Nº Admissão":2,
-        "Nome Servidor":"JACQUELINE OLIVEIRA VIDAL",
-        "Data Completa":"1978-06-28T00:00:00.000",
-        "Cod Sexo":"F",
-        "Cod Carreira":"PENF",
-        "Categoria Profissional\/Ocupação":"ENFERMEIRO",
-        "Situação Servidor":"ATIVO",
-        "Data Exercício":"2025-05-19T00:00:00.000"
-    },
-    {
         "Masp\/Admissão":127060991,
         "MASP":12706099,
         "Nº Admissão":1,
@@ -53542,18 +53458,6 @@
         "Categoria Profissional\/Ocupação":"TECNICO DE ENFERMAGEM",
         "Situação Servidor":"ATIVO",
         "Data Exercício":"2011-05-17T00:00:00.000"
-    },
-    {
-        "Masp\/Admissão":128117331,
-        "MASP":12811733,
-        "Nº Admissão":1,
-        "Nome Servidor":"KARINE ANTUNES MARQUES NOTARO",
-        "Data Completa":"1987-03-23T00:00:00.000",
-        "Cod Sexo":"F",
-        "Cod Carreira":"PENF",
-        "Categoria Profissional\/Ocupação":"ENFERMEIRO",
-        "Situação Servidor":"ATIVO",
-        "Data Exercício":"2011-05-25T00:00:00.000"
     },
     {
         "Masp\/Admissão":128117901,
@@ -73056,6 +72960,18 @@
         "Data Exercício":"2012-06-05T00:00:00.000"
     },
     {
+        "Masp\/Admissão":130649511,
+        "MASP":13064951,
+        "Nº Admissão":1,
+        "Nome Servidor":"DEIVSON EDUARDO SOUZA FERNANDES",
+        "Data Completa":"1978-05-15T00:00:00.000",
+        "Cod Sexo":"M",
+        "Cod Carreira":"PENF",
+        "Categoria Profissional\/Ocupação":"TECNICO DE ENFERMAGEM",
+        "Situação Servidor":"DISP\/ADJUNCAO SEM ONUS- ORIGEM",
+        "Data Exercício":"2012-07-09T00:00:00.000"
+    },
+    {
         "Masp\/Admissão":130649692,
         "MASP":13064969,
         "Nº Admissão":2,
@@ -75118,18 +75034,6 @@
         "Categoria Profissional\/Ocupação":"TECNICO DE ENFERMAGEM",
         "Situação Servidor":"ATIVO",
         "Data Exercício":"2012-08-01T00:00:00.000"
-    },
-    {
-        "Masp\/Admissão":130850631,
-        "MASP":13085063,
-        "Nº Admissão":1,
-        "Nome Servidor":"GLAUCIA FERNANDES DE ALMEIDA RODRIGUES",
-        "Data Completa":"1978-03-03T00:00:00.000",
-        "Cod Sexo":"F",
-        "Cod Carreira":"PENF",
-        "Categoria Profissional\/Ocupação":"TECNICO DE ENFERMAGEM",
-        "Situação Servidor":"ATIVO",
-        "Data Exercício":"2012-07-23T00:00:00.000"
     },
     {
         "Masp\/Admissão":130851131,
@@ -79964,7 +79868,7 @@
         "Cod Sexo":"F",
         "Cod Carreira":"AGAS",
         "Categoria Profissional\/Ocupação":"PSICOLOGO",
-        "Situação Servidor":"ATIVO",
+        "Situação Servidor":"EM PROCESSO DE APOSENTADORIA",
         "Data Exercício":"2013-02-04T00:00:00.000"
     },
     {
@@ -80926,18 +80830,6 @@
         "Categoria Profissional\/Ocupação":"TECNICO DE ENFERMAGEM",
         "Situação Servidor":"ATIVO",
         "Data Exercício":"2013-02-14T00:00:00.000"
-    },
-    {
-        "Masp\/Admissão":132955633,
-        "MASP":13295563,
-        "Nº Admissão":3,
-        "Nome Servidor":"ALINE BERTONI DA SILVA JORGE",
-        "Data Completa":"1985-12-11T00:00:00.000",
-        "Cod Sexo":"F",
-        "Cod Carreira":"MED",
-        "Categoria Profissional\/Ocupação":"MEDICO PEDIATRA",
-        "Situação Servidor":"ATIVO",
-        "Data Exercício":"2017-06-02T00:00:00.000"
     },
     {
         "Masp\/Admissão":132957611,
@@ -83844,18 +83736,6 @@
         "Data Exercício":"2014-03-24T00:00:00.000"
     },
     {
-        "Masp\/Admissão":135227681,
-        "MASP":13522768,
-        "Nº Admissão":1,
-        "Nome Servidor":"MARIA APARECIDA VIEIRA MENDONCA",
-        "Data Completa":"1968-02-21T00:00:00.000",
-        "Cod Sexo":"F",
-        "Cod Carreira":"PENF",
-        "Categoria Profissional\/Ocupação":"TECNICO DE ENFERMAGEM",
-        "Situação Servidor":"EM PROCESSO DE APOSENTADORIA",
-        "Data Exercício":"2013-10-07T00:00:00.000"
-    },
-    {
         "Masp\/Admissão":135251831,
         "MASP":13525183,
         "Nº Admissão":1,
@@ -84519,7 +84399,7 @@
         "Masp\/Admissão":135594552,
         "MASP":13559455,
         "Nº Admissão":2,
-        "Nome Servidor":"VANUSA APARECIDA SIQUEIRA",
+        "Nome Servidor":"VANUSA APARECIDA SIQUEIRA DOS ANJOS",
         "Data Completa":"1978-11-20T00:00:00.000",
         "Cod Sexo":"F",
         "Cod Carreira":"PENF",
@@ -85042,18 +84922,6 @@
         "Categoria Profissional\/Ocupação":"MEDICO CIRURGIAO CARDIOVASCULAR",
         "Situação Servidor":"ATIVO",
         "Data Exercício":"2014-01-11T00:00:00.000"
-    },
-    {
-        "Masp\/Admissão":135637701,
-        "MASP":13563770,
-        "Nº Admissão":1,
-        "Nome Servidor":"MAIARA ALESSANDRA CALIXTO FERREIRA",
-        "Data Completa":"1989-05-30T00:00:00.000",
-        "Cod Sexo":"F",
-        "Cod Carreira":"TOS",
-        "Categoria Profissional\/Ocupação":"AUXILIAR ADMINISTRATIVO",
-        "Situação Servidor":"ATIVO",
-        "Data Exercício":"2013-12-23T00:00:00.000"
     },
     {
         "Masp\/Admissão":135637961,
@@ -89640,18 +89508,6 @@
         "Data Exercício":"2014-02-24T00:00:00.000"
     },
     {
-        "Masp\/Admissão":136487791,
-        "MASP":13648779,
-        "Nº Admissão":1,
-        "Nome Servidor":"LEILA SOARES TOMAZ DE OLIVEIRA",
-        "Data Completa":"1981-06-27T00:00:00.000",
-        "Cod Sexo":"F",
-        "Cod Carreira":"TOS",
-        "Categoria Profissional\/Ocupação":"TECNICO EM PATOLOGIA CLINICA",
-        "Situação Servidor":"ATIVO",
-        "Data Exercício":"2014-03-24T00:00:00.000"
-    },
-    {
         "Masp\/Admissão":136488601,
         "MASP":13648860,
         "Nº Admissão":1,
@@ -90838,18 +90694,6 @@
         "Categoria Profissional\/Ocupação":"AUXILIAR ADMINISTRATIVO",
         "Situação Servidor":"ATIVO",
         "Data Exercício":"2014-06-09T00:00:00.000"
-    },
-    {
-        "Masp\/Admissão":136700881,
-        "MASP":13670088,
-        "Nº Admissão":1,
-        "Nome Servidor":"LUCINEIA DE OLIVEIRA SOUZA",
-        "Data Completa":"1968-11-29T00:00:00.000",
-        "Cod Sexo":"F",
-        "Cod Carreira":"AGAS",
-        "Categoria Profissional\/Ocupação":"FARMACEUTICO HOSPITALAR",
-        "Situação Servidor":"ATIVO",
-        "Data Exercício":"2014-05-26T00:00:00.000"
     },
     {
         "Masp\/Admissão":136700961,
@@ -95348,7 +95192,7 @@
         "Cod Sexo":"F",
         "Cod Carreira":"PENF",
         "Categoria Profissional\/Ocupação":"TECNICO DE ENFERMAGEM",
-        "Situação Servidor":"ATIVO",
+        "Situação Servidor":"EM PROCESSO DE APOSENTADORIA",
         "Data Exercício":"2014-08-20T00:00:00.000"
     },
     {
@@ -97404,18 +97248,6 @@
         "Data Exercício":"2014-12-09T00:00:00.000"
     },
     {
-        "Masp\/Admissão":137932862,
-        "MASP":13793286,
-        "Nº Admissão":2,
-        "Nome Servidor":"CIBELE PEREIRA DA SILVA",
-        "Data Completa":"1994-03-09T00:00:00.000",
-        "Cod Sexo":"F",
-        "Cod Carreira":"AGAS",
-        "Categoria Profissional\/Ocupação":"FISIOTERAPEUTA RESPIRATORIA",
-        "Situação Servidor":"ATIVO",
-        "Data Exercício":"2026-03-01T00:00:00.000"
-    },
-    {
         "Masp\/Admissão":137937991,
         "MASP":13793799,
         "Nº Admissão":1,
@@ -97704,18 +97536,6 @@
         "Data Exercício":"2024-08-15T00:00:00.000"
     },
     {
-        "Masp\/Admissão":138184552,
-        "MASP":13818455,
-        "Nº Admissão":2,
-        "Nome Servidor":"EUDA ANA SOARES LIMA",
-        "Data Completa":"1975-08-15T00:00:00.000",
-        "Cod Sexo":"F",
-        "Cod Carreira":"TOS",
-        "Categoria Profissional\/Ocupação":"AUXILIAR ADMINISTRATIVO",
-        "Situação Servidor":"ATIVO",
-        "Data Exercício":"2017-09-13T00:00:00.000"
-    },
-    {
         "Masp\/Admissão":138193703,
         "MASP":13819370,
         "Nº Admissão":3,
@@ -97918,18 +97738,6 @@
         "Categoria Profissional\/Ocupação":"MEDICO GINECOLOGISTA E OBSTETRA",
         "Situação Servidor":"ATIVO",
         "Data Exercício":"2024-08-09T00:00:00.000"
-    },
-    {
-        "Masp\/Admissão":138502764,
-        "MASP":13850276,
-        "Nº Admissão":4,
-        "Nome Servidor":"NATHALIA DE MORAIS COUTINHO",
-        "Data Completa":"1986-12-18T00:00:00.000",
-        "Cod Sexo":"F",
-        "Cod Carreira":"MED",
-        "Categoria Profissional\/Ocupação":"MEDICO GINECOLOGISTA E OBSTETRA",
-        "Situação Servidor":"ATIVO",
-        "Data Exercício":"2025-04-06T00:00:00.000"
     },
     {
         "Masp\/Admissão":138511831,
@@ -99324,18 +99132,6 @@
         "Data Exercício":"2015-09-04T00:00:00.000"
     },
     {
-        "Masp\/Admissão":139796954,
-        "MASP":13979695,
-        "Nº Admissão":4,
-        "Nome Servidor":"CRISTIANE FERREIRA DE ANDRADE",
-        "Data Completa":"1981-06-18T00:00:00.000",
-        "Cod Sexo":"F",
-        "Cod Carreira":"AGAS",
-        "Categoria Profissional\/Ocupação":"NUTRICIONISTA",
-        "Situação Servidor":"ATIVO",
-        "Data Exercício":"2024-12-03T00:00:00.000"
-    },
-    {
         "Masp\/Admissão":139797292,
         "MASP":13979729,
         "Nº Admissão":2,
@@ -99502,18 +99298,6 @@
         "Categoria Profissional\/Ocupação":"TECNICO EM RADIOLOGIA",
         "Situação Servidor":"ATIVO",
         "Data Exercício":"2025-07-13T00:00:00.000"
-    },
-    {
-        "Masp\/Admissão":140298961,
-        "MASP":14029896,
-        "Nº Admissão":1,
-        "Nome Servidor":"ANDRE FARES DIAS",
-        "Data Completa":"1982-04-23T00:00:00.000",
-        "Cod Sexo":"M",
-        "Cod Carreira":"MED",
-        "Categoria Profissional\/Ocupação":"MEDICO CIRURGIAO VASCULAR",
-        "Situação Servidor":"ATIVO",
-        "Data Exercício":"2015-10-13T00:00:00.000"
     },
     {
         "Masp\/Admissão":140360816,
@@ -99936,6 +99720,18 @@
         "Data Exercício":"2022-09-30T00:00:00.000"
     },
     {
+        "Masp\/Admissão":142218813,
+        "MASP":14221881,
+        "Nº Admissão":3,
+        "Nome Servidor":"JULIA FARIAS ALKIMIM",
+        "Data Completa":"1987-08-26T00:00:00.000",
+        "Cod Sexo":"F",
+        "Cod Carreira":"MED",
+        "Categoria Profissional\/Ocupação":"MEDICO GINECOLOGISTA E OBSTETRA",
+        "Situação Servidor":"ATIVO",
+        "Data Exercício":"2026-06-30T00:00:00.000"
+    },
+    {
         "Masp\/Admissão":142225906,
         "MASP":14222590,
         "Nº Admissão":6,
@@ -100018,6 +99814,30 @@
         "Categoria Profissional\/Ocupação":"MEDICO GINECOLOGISTA E OBSTETRA",
         "Situação Servidor":"ATIVO",
         "Data Exercício":"2025-03-16T00:00:00.000"
+    },
+    {
+        "Masp\/Admissão":142395604,
+        "MASP":14239560,
+        "Nº Admissão":4,
+        "Nome Servidor":"GABRIELA MIRANDA MENDES",
+        "Data Completa":"1988-02-22T00:00:00.000",
+        "Cod Sexo":"F",
+        "Cod Carreira":"MED",
+        "Categoria Profissional\/Ocupação":"MEDICO NEONATOLOGISTA",
+        "Situação Servidor":"ATIVO",
+        "Data Exercício":"2026-06-16T00:00:00.000"
+    },
+    {
+        "Masp\/Admissão":142410952,
+        "MASP":14241095,
+        "Nº Admissão":2,
+        "Nome Servidor":"LUISA ROSA FRANCO",
+        "Data Completa":"1990-01-28T00:00:00.000",
+        "Cod Sexo":"F",
+        "Cod Carreira":"MED",
+        "Categoria Profissional\/Ocupação":"MEDICO GINECOLOGISTA E OBSTETRA",
+        "Situação Servidor":"ATIVO",
+        "Data Exercício":"2026-07-07T00:00:00.000"
     },
     {
         "Masp\/Admissão":142465816,
@@ -101508,6 +101328,18 @@
         "Data Exercício":"2025-07-23T00:00:00.000"
     },
     {
+        "Masp\/Admissão":146132023,
+        "MASP":14613202,
+        "Nº Admissão":3,
+        "Nome Servidor":"CAROLINE CASSIA DE MORAIS",
+        "Data Completa":"1991-10-08T00:00:00.000",
+        "Cod Sexo":"F",
+        "Cod Carreira":"MED",
+        "Categoria Profissional\/Ocupação":"MEDICO GINECOLOGISTA E OBSTETRA",
+        "Situação Servidor":"ATIVO",
+        "Data Exercício":"2026-06-03T00:00:00.000"
+    },
+    {
         "Masp\/Admissão":146132513,
         "MASP":14613251,
         "Nº Admissão":3,
@@ -101686,18 +101518,6 @@
         "Categoria Profissional\/Ocupação":"MEDICO EM MEDICINA INTENSIVA",
         "Situação Servidor":"ATIVO",
         "Data Exercício":"2024-08-14T00:00:00.000"
-    },
-    {
-        "Masp\/Admissão":146169166,
-        "MASP":14616916,
-        "Nº Admissão":6,
-        "Nome Servidor":"PEDRO PAULO MARTINS ALVARENGA",
-        "Data Completa":"1993-02-17T00:00:00.000",
-        "Cod Sexo":"M",
-        "Cod Carreira":"MED",
-        "Categoria Profissional\/Ocupação":"MEDICO CLINICO",
-        "Situação Servidor":"DISP\/ADJ EXERCER CCOMI.\/FUNCAO",
-        "Data Exercício":"2024-09-03T00:00:00.000"
     },
     {
         "Masp\/Admissão":146169325,
@@ -102168,18 +101988,6 @@
         "Data Exercício":"2018-09-06T00:00:00.000"
     },
     {
-        "Masp\/Admissão":146901921,
-        "MASP":14690192,
-        "Nº Admissão":1,
-        "Nome Servidor":"FLAVIA CRISTINA DIAMANTINO",
-        "Data Completa":"1985-03-04T00:00:00.000",
-        "Cod Sexo":"F",
-        "Cod Carreira":"MED",
-        "Categoria Profissional\/Ocupação":"MEDICO PEDIATRA",
-        "Situação Servidor":"ATIVO",
-        "Data Exercício":"2018-09-22T00:00:00.000"
-    },
-    {
         "Masp\/Admissão":146912404,
         "MASP":14691240,
         "Nº Admissão":4,
@@ -102468,16 +102276,16 @@
         "Data Exercício":"2026-03-13T00:00:00.000"
     },
     {
-        "Masp\/Admissão":147575792,
-        "MASP":14757579,
+        "Masp\/Admissão":147576782,
+        "MASP":14757678,
         "Nº Admissão":2,
-        "Nome Servidor":"NAJILA AELIDA OLIVEIRA VIANA",
-        "Data Completa":"1993-02-09T00:00:00.000",
-        "Cod Sexo":"F",
+        "Nome Servidor":"PHILLIPE HOSSATANI PEREIRA",
+        "Data Completa":"1995-02-24T00:00:00.000",
+        "Cod Sexo":"M",
         "Cod Carreira":"MED",
-        "Categoria Profissional\/Ocupação":"MEDICO CIRURGIAO DE CABECA E PESCOCO",
+        "Categoria Profissional\/Ocupação":"MEDICO CIRURGIAO PEDIATRICO",
         "Situação Servidor":"ATIVO",
-        "Data Exercício":"2025-12-05T00:00:00.000"
+        "Data Exercício":"2026-07-08T00:00:00.000"
     },
     {
         "Masp\/Admissão":147577022,
@@ -103692,18 +103500,6 @@
         "Data Exercício":"2026-02-09T00:00:00.000"
     },
     {
-        "Masp\/Admissão":148976983,
-        "MASP":14897698,
-        "Nº Admissão":3,
-        "Nome Servidor":"FABIANE CORBELLI ROBERTI",
-        "Data Completa":"1985-04-29T00:00:00.000",
-        "Cod Sexo":"F",
-        "Cod Carreira":"MED",
-        "Categoria Profissional\/Ocupação":"MEDICO EM RADIOLOG.E DIAGNOST.POR IMAGEM",
-        "Situação Servidor":"ATIVO",
-        "Data Exercício":"2025-04-09T00:00:00.000"
-    },
-    {
         "Masp\/Admissão":148996035,
         "MASP":14899603,
         "Nº Admissão":5,
@@ -104026,18 +103822,6 @@
         "Categoria Profissional\/Ocupação":"AUXILIAR ADMINISTRATIVO",
         "Situação Servidor":"ATIVO",
         "Data Exercício":"2025-09-01T00:00:00.000"
-    },
-    {
-        "Masp\/Admissão":149195343,
-        "MASP":14919534,
-        "Nº Admissão":3,
-        "Nome Servidor":"CAMILLA SALES DIAS SCHAZMANN",
-        "Data Completa":"1994-05-27T00:00:00.000",
-        "Cod Sexo":"F",
-        "Cod Carreira":"MED",
-        "Categoria Profissional\/Ocupação":"MEDICO CLINICO",
-        "Situação Servidor":"ATIVO",
-        "Data Exercício":"2024-09-25T00:00:00.000"
     },
     {
         "Masp\/Admissão":149196582,
@@ -105339,7 +105123,7 @@
         "Masp\/Admissão":151521433,
         "MASP":15152143,
         "Nº Admissão":3,
-        "Nome Servidor":"JULIA PASSINI VAZ TOSTES",
+        "Nome Servidor":"JULIA PASSINI VAZ-TOSTES",
         "Data Completa":"1994-12-08T00:00:00.000",
         "Cod Sexo":"F",
         "Cod Carreira":"MED",
@@ -105660,18 +105444,6 @@
         "Data Exercício":"2024-09-09T00:00:00.000"
     },
     {
-        "Masp\/Admissão":152753573,
-        "MASP":15275357,
-        "Nº Admissão":3,
-        "Nome Servidor":"PAULO EMILIO TONACO COSTA",
-        "Data Completa":"1990-09-03T00:00:00.000",
-        "Cod Sexo":"M",
-        "Cod Carreira":"MED",
-        "Categoria Profissional\/Ocupação":"MEDICO PEDIATRA",
-        "Situação Servidor":"ATIVO",
-        "Data Exercício":"2024-09-02T00:00:00.000"
-    },
-    {
         "Masp\/Admissão":152765382,
         "MASP":15276538,
         "Nº Admissão":2,
@@ -105838,18 +105610,6 @@
         "Categoria Profissional\/Ocupação":"ADMINISTRADOR",
         "Situação Servidor":"ATIVO",
         "Data Exercício":"2025-07-21T00:00:00.000"
-    },
-    {
-        "Masp\/Admissão":152888062,
-        "MASP":15288806,
-        "Nº Admissão":2,
-        "Nome Servidor":"KAROLLINE EMANUELLE TRINDADE COIMBRA",
-        "Data Completa":"1986-05-24T00:00:00.000",
-        "Cod Sexo":"F",
-        "Cod Carreira":"MED",
-        "Categoria Profissional\/Ocupação":"MEDICO CLINICO",
-        "Situação Servidor":"ATIVO",
-        "Data Exercício":"2025-02-03T00:00:00.000"
     },
     {
         "Masp\/Admissão":152894734,
@@ -106714,6 +106474,18 @@
         "Categoria Profissional\/Ocupação":"FARMACEUTICO",
         "Situação Servidor":"ATIVO",
         "Data Exercício":"2025-07-09T00:00:00.000"
+    },
+    {
+        "Masp\/Admissão":156421432,
+        "MASP":15642143,
+        "Nº Admissão":2,
+        "Nome Servidor":"JULIANO RAMOS",
+        "Data Completa":"1976-10-18T00:00:00.000",
+        "Cod Sexo":"M",
+        "Cod Carreira":"TOS",
+        "Categoria Profissional\/Ocupação":"TECNICO EM RADIOLOGIA",
+        "Situação Servidor":"ATIVO",
+        "Data Exercício":"2026-06-18T00:00:00.000"
     },
     {
         "Masp\/Admissão":156446692,
@@ -110638,18 +110410,6 @@
         "Categoria Profissional\/Ocupação":"TECNICO DE ENFERMAGEM",
         "Situação Servidor":"ATIVO",
         "Data Exercício":"2025-05-07T00:00:00.000"
-    },
-    {
-        "Masp\/Admissão":163072581,
-        "MASP":16307258,
-        "Nº Admissão":1,
-        "Nome Servidor":"AMANDA CRISTINA FELIX ALVES",
-        "Data Completa":"1981-08-30T00:00:00.000",
-        "Cod Sexo":"F",
-        "Cod Carreira":"PENF",
-        "Categoria Profissional\/Ocupação":"TECNICO DE ENFERMAGEM",
-        "Situação Servidor":"ATIVO",
-        "Data Exercício":"2025-05-08T00:00:00.000"
     },
     {
         "Masp\/Admissão":163072741,
@@ -116376,18 +116136,6 @@
         "Data Exercício":"2025-06-17T00:00:00.000"
     },
     {
-        "Masp\/Admissão":163657691,
-        "MASP":16365769,
-        "Nº Admissão":1,
-        "Nome Servidor":"CICERA MARIA DA SILVA BRITO CASTRO",
-        "Data Completa":"1992-10-13T00:00:00.000",
-        "Cod Sexo":"F",
-        "Cod Carreira":"MED",
-        "Categoria Profissional\/Ocupação":"MEDICO CLINICO",
-        "Situação Servidor":"ATIVO",
-        "Data Exercício":"2025-06-18T00:00:00.000"
-    },
-    {
         "Masp\/Admissão":163658271,
         "MASP":16365827,
         "Nº Admissão":1,
@@ -119151,7 +118899,7 @@
         "Masp\/Admissão":163855931,
         "MASP":16385593,
         "Nº Admissão":1,
-        "Nome Servidor":"STEFANE REGINA FREITAS DA SILVA",
+        "Nome Servidor":"STEFANE REGINA FERNANDES FREITAS DA SILV",
         "Data Completa":"1990-07-27T00:00:00.000",
         "Cod Sexo":"F",
         "Cod Carreira":"PENF",
@@ -119290,18 +119038,6 @@
         "Categoria Profissional\/Ocupação":"TECNICO DE ENFERMAGEM",
         "Situação Servidor":"ATIVO",
         "Data Exercício":"2025-08-06T00:00:00.000"
-    },
-    {
-        "Masp\/Admissão":163868721,
-        "MASP":16386872,
-        "Nº Admissão":1,
-        "Nome Servidor":"ALEX REIS DA SILVA",
-        "Data Completa":"1990-08-11T00:00:00.000",
-        "Cod Sexo":"M",
-        "Cod Carreira":"AGAS",
-        "Categoria Profissional\/Ocupação":"ADMINISTRADOR",
-        "Situação Servidor":"ATIVO",
-        "Data Exercício":"2025-08-12T00:00:00.000"
     },
     {
         "Masp\/Admissão":163869141,
@@ -119686,18 +119422,6 @@
         "Categoria Profissional\/Ocupação":"AUXILIAR ADMINISTRATIVO",
         "Situação Servidor":"ATIVO",
         "Data Exercício":"2025-08-18T00:00:00.000"
-    },
-    {
-        "Masp\/Admissão":163919142,
-        "MASP":16391914,
-        "Nº Admissão":2,
-        "Nome Servidor":"ANA CAROLINA SILVA ALMADA",
-        "Data Completa":"1988-08-27T00:00:00.000",
-        "Cod Sexo":"F",
-        "Cod Carreira":"MED",
-        "Categoria Profissional\/Ocupação":"MEDICO CIRURGIAO GERAL",
-        "Situação Servidor":"ATIVO",
-        "Data Exercício":"2025-08-24T00:00:00.000"
     },
     {
         "Masp\/Admissão":163919301,
@@ -121428,18 +121152,6 @@
         "Data Exercício":"2025-12-29T00:00:00.000"
     },
     {
-        "Masp\/Admissão":164377412,
-        "MASP":16437741,
-        "Nº Admissão":2,
-        "Nome Servidor":"JOBSON FONSECA DA COSTA",
-        "Data Completa":"1995-07-17T00:00:00.000",
-        "Cod Sexo":"M",
-        "Cod Carreira":"AGAS",
-        "Categoria Profissional\/Ocupação":"GESTOR PUBLICO",
-        "Situação Servidor":"ATIVO",
-        "Data Exercício":"2025-12-29T00:00:00.000"
-    },
-    {
         "Masp\/Admissão":164377581,
         "MASP":16437758,
         "Nº Admissão":1,
@@ -121510,18 +121222,6 @@
         "Categoria Profissional\/Ocupação":"FISIOTERAPEUTA RESPIRATORIA",
         "Situação Servidor":"ATIVO",
         "Data Exercício":"2025-12-31T00:00:00.000"
-    },
-    {
-        "Masp\/Admissão":164391271,
-        "MASP":16439127,
-        "Nº Admissão":1,
-        "Nome Servidor":"NATALIA DAMASCENO BRAGA",
-        "Data Completa":"1987-07-15T00:00:00.000",
-        "Cod Sexo":"F",
-        "Cod Carreira":"MED",
-        "Categoria Profissional\/Ocupação":"MEDICO GINECOLOGISTA E OBSTETRA",
-        "Situação Servidor":"ATIVO",
-        "Data Exercício":"2026-01-03T00:00:00.000"
     },
     {
         "Masp\/Admissão":164391351,
@@ -122616,18 +122316,6 @@
         "Data Exercício":"2026-05-29T00:00:00.000"
     },
     {
-        "Masp\/Admissão":166264591,
-        "MASP":16626459,
-        "Nº Admissão":1,
-        "Nome Servidor":"ANNA ELIZABETH GUIDA FERREIRA",
-        "Data Completa":"1989-07-13T00:00:00.000",
-        "Cod Sexo":"F",
-        "Cod Carreira":"MED",
-        "Categoria Profissional\/Ocupação":"MEDICO GINECOLOGISTA E OBSTETRA",
-        "Situação Servidor":"ATIVO",
-        "Data Exercício":"2026-06-03T00:00:00.000"
-    },
-    {
         "Masp\/Admissão":166265251,
         "MASP":16626525,
         "Nº Admissão":1,
@@ -122650,6 +122338,150 @@
         "Categoria Profissional\/Ocupação":"ENFERMEIRO DE TERAPIA INTENSIVA",
         "Situação Servidor":"ATIVO",
         "Data Exercício":"2026-06-03T00:00:00.000"
+    },
+    {
+        "Masp\/Admissão":166514081,
+        "MASP":16651408,
+        "Nº Admissão":1,
+        "Nome Servidor":"BRUNO FERREIRA ALMEIDA",
+        "Data Completa":"1989-09-01T00:00:00.000",
+        "Cod Sexo":"M",
+        "Cod Carreira":"TOS",
+        "Categoria Profissional\/Ocupação":"TECNICO EM RADIOLOGIA",
+        "Situação Servidor":"ATIVO",
+        "Data Exercício":"2026-06-29T00:00:00.000"
+    },
+    {
+        "Masp\/Admissão":166515151,
+        "MASP":16651515,
+        "Nº Admissão":1,
+        "Nome Servidor":"VIVIAN CARVALHO AMBROSIO DE CASTRO",
+        "Data Completa":"1990-09-12T00:00:00.000",
+        "Cod Sexo":"F",
+        "Cod Carreira":"TOS",
+        "Categoria Profissional\/Ocupação":"TECNICO EM RADIOLOGIA",
+        "Situação Servidor":"ATIVO",
+        "Data Exercício":"2026-07-01T00:00:00.000"
+    },
+    {
+        "Masp\/Admissão":166539661,
+        "MASP":16653966,
+        "Nº Admissão":1,
+        "Nome Servidor":"FELIPE MARCONDES DE OLIVEIRA COELHO",
+        "Data Completa":"1992-10-05T00:00:00.000",
+        "Cod Sexo":"M",
+        "Cod Carreira":"MED",
+        "Categoria Profissional\/Ocupação":"MEDICO MASTOLOGISTA",
+        "Situação Servidor":"ATIVO",
+        "Data Exercício":"2026-06-17T00:00:00.000"
+    },
+    {
+        "Masp\/Admissão":166539741,
+        "MASP":16653974,
+        "Nº Admissão":1,
+        "Nome Servidor":"MARIA CRISTINA FERNANDES SOUZA",
+        "Data Completa":"1991-03-01T00:00:00.000",
+        "Cod Sexo":"F",
+        "Cod Carreira":"MED",
+        "Categoria Profissional\/Ocupação":"MEDICO NEONATOLOGISTA",
+        "Situação Servidor":"ATIVO",
+        "Data Exercício":"2026-06-19T00:00:00.000"
+    },
+    {
+        "Masp\/Admissão":166540061,
+        "MASP":16654006,
+        "Nº Admissão":1,
+        "Nome Servidor":"SULAMITA LANNA DE SOUZA MARTINS DE CAMPO",
+        "Data Completa":"1992-01-07T00:00:00.000",
+        "Cod Sexo":"F",
+        "Cod Carreira":"TOS",
+        "Categoria Profissional\/Ocupação":"TECNICO EM RADIOLOGIA",
+        "Situação Servidor":"ATIVO",
+        "Data Exercício":"2026-06-17T00:00:00.000"
+    },
+    {
+        "Masp\/Admissão":166540221,
+        "MASP":16654022,
+        "Nº Admissão":1,
+        "Nome Servidor":"LUCAS MENDES MATEUS",
+        "Data Completa":"1989-03-07T00:00:00.000",
+        "Cod Sexo":"M",
+        "Cod Carreira":"AGAS",
+        "Categoria Profissional\/Ocupação":"ENGENHEIRO DE SEGURANCA DO TRABALHO",
+        "Situação Servidor":"ATIVO",
+        "Data Exercício":"2026-06-17T00:00:00.000"
+    },
+    {
+        "Masp\/Admissão":166540301,
+        "MASP":16654030,
+        "Nº Admissão":1,
+        "Nome Servidor":"LUDMILLA RODRIGUES DOS SANTOS",
+        "Data Completa":"1989-09-26T00:00:00.000",
+        "Cod Sexo":"F",
+        "Cod Carreira":"AGAS",
+        "Categoria Profissional\/Ocupação":"ADMINISTRADOR",
+        "Situação Servidor":"ATIVO",
+        "Data Exercício":"2026-07-02T00:00:00.000"
+    },
+    {
+        "Masp\/Admissão":166564311,
+        "MASP":16656431,
+        "Nº Admissão":1,
+        "Nome Servidor":"LARA MARIANA GOMES PEREIRA",
+        "Data Completa":"2001-04-07T00:00:00.000",
+        "Cod Sexo":"F",
+        "Cod Carreira":"AGAS",
+        "Categoria Profissional\/Ocupação":"ASSISTENTE SOCIAL",
+        "Situação Servidor":"ATIVO",
+        "Data Exercício":"2026-07-10T00:00:00.000"
+    },
+    {
+        "Masp\/Admissão":166564561,
+        "MASP":16656456,
+        "Nº Admissão":1,
+        "Nome Servidor":"FLAVIO GONCALVES ANDRADE GUIMARAES",
+        "Data Completa":"1998-01-06T00:00:00.000",
+        "Cod Sexo":"M",
+        "Cod Carreira":"TOS",
+        "Categoria Profissional\/Ocupação":"TECNICO EM RADIOLOGIA",
+        "Situação Servidor":"ATIVO",
+        "Data Exercício":"2026-07-08T00:00:00.000"
+    },
+    {
+        "Masp\/Admissão":166596901,
+        "MASP":16659690,
+        "Nº Admissão":1,
+        "Nome Servidor":"VANESSA SILVA REZENDE PEREIRA",
+        "Data Completa":"1985-05-23T00:00:00.000",
+        "Cod Sexo":"F",
+        "Cod Carreira":"AGAS",
+        "Categoria Profissional\/Ocupação":"FISIOTERAPEUTA",
+        "Situação Servidor":"ATIVO",
+        "Data Exercício":"2026-07-13T00:00:00.000"
+    },
+    {
+        "Masp\/Admissão":166610271,
+        "MASP":16661027,
+        "Nº Admissão":1,
+        "Nome Servidor":"JESSICA OCTACILLA ACIPRESTE MIRANDA",
+        "Data Completa":"1991-08-08T00:00:00.000",
+        "Cod Sexo":"F",
+        "Cod Carreira":"AGAS",
+        "Categoria Profissional\/Ocupação":"NUTRICIONISTA",
+        "Situação Servidor":"ATIVO",
+        "Data Exercício":"2026-07-13T00:00:00.000"
+    },
+    {
+        "Masp\/Admissão":166610682,
+        "MASP":16661068,
+        "Nº Admissão":2,
+        "Nome Servidor":"ELAINE DOS SANTOS DALTRO",
+        "Data Completa":"1985-12-15T00:00:00.000",
+        "Cod Sexo":"F",
+        "Cod Carreira":"PENF",
+        "Categoria Profissional\/Ocupação":"ENFERMEIRO OBSTETRICO",
+        "Situação Servidor":"ATIVO",
+        "Data Exercício":"2026-07-15T00:00:00.000"
     },
     {
         "Masp\/Admissão":26322974,
@@ -122720,7 +122552,7 @@
         "Cod Sexo":"F",
         "Cod Carreira":"MED",
         "Categoria Profissional\/Ocupação":"MEDICO PSIQUIATRA",
-        "Situação Servidor":"ATIVO",
+        "Situação Servidor":"EM PROCESSO DE APOSENTADORIA",
         "Data Exercício":"1990-08-01T00:00:00.000"
     },
     {
@@ -122880,6 +122712,18 @@
         "Data Exercício":"2011-10-25T00:00:00.000"
     },
     {
+        "Masp\/Admissão":34955792,
+        "MASP":3495579,
+        "Nº Admissão":2,
+        "Nome Servidor":"ARISTOTELES DOS SANTOS CHAVES",
+        "Data Completa":"1962-01-20T00:00:00.000",
+        "Cod Sexo":"M",
+        "Cod Carreira":"MED",
+        "Categoria Profissional\/Ocupação":"MEDICO OBSTETRA",
+        "Situação Servidor":"ATIVO",
+        "Data Exercício":"1990-08-01T00:00:00.000"
+    },
+    {
         "Masp\/Admissão":34961631,
         "MASP":3496163,
         "Nº Admissão":1,
@@ -122964,6 +122808,18 @@
         "Data Exercício":"2004-04-01T00:00:00.000"
     },
     {
+        "Masp\/Admissão":35207312,
+        "MASP":3520731,
+        "Nº Admissão":2,
+        "Nome Servidor":"GUI TARCISIO MAZZONI JUNIOR",
+        "Data Completa":"1963-10-14T00:00:00.000",
+        "Cod Sexo":"M",
+        "Cod Carreira":"MED",
+        "Categoria Profissional\/Ocupação":"MEDICO OBSTETRA",
+        "Situação Servidor":"ATIVO",
+        "Data Exercício":"1990-08-01T00:00:00.000"
+    },
+    {
         "Masp\/Admissão":36230713,
         "MASP":3623071,
         "Nº Admissão":3,
@@ -123034,6 +122890,18 @@
         "Categoria Profissional\/Ocupação":"TECNICO DE ENFERMAGEM",
         "Situação Servidor":"ATIVO",
         "Data Exercício":"2012-03-01T00:00:00.000"
+    },
+    {
+        "Masp\/Admissão":37171542,
+        "MASP":3717154,
+        "Nº Admissão":2,
+        "Nome Servidor":"CLAUDIA CAMPOLINA MORAIS",
+        "Data Completa":"1963-08-13T00:00:00.000",
+        "Cod Sexo":"F",
+        "Cod Carreira":"AGAS",
+        "Categoria Profissional\/Ocupação":"JORNALISTA",
+        "Situação Servidor":"DISP\/ADJUNCAO SEM ONUS- ORIGEM",
+        "Data Exercício":"1990-08-01T00:00:00.000"
     },
     {
         "Masp\/Admissão":37172951,
@@ -123502,18 +123370,6 @@
         "Categoria Profissional\/Ocupação":"PSICOLOGO",
         "Situação Servidor":"ATIVO",
         "Data Exercício":"2004-12-03T00:00:00.000"
-    },
-    {
-        "Masp\/Admissão":55674822,
-        "MASP":5567482,
-        "Nº Admissão":2,
-        "Nome Servidor":"MICAELA GOMES DE SOUZA",
-        "Data Completa":"1970-02-25T00:00:00.000",
-        "Cod Sexo":"F",
-        "Cod Carreira":"PENF",
-        "Categoria Profissional\/Ocupação":"TECNICO DE ENFERMAGEM",
-        "Situação Servidor":"ATIVO",
-        "Data Exercício":"2011-08-02T00:00:00.000"
     },
     {
         "Masp\/Admissão":55767721,
@@ -124642,6 +124498,18 @@
         "Categoria Profissional\/Ocupação":"MEDICO EM MEDICINA INTENSIVA",
         "Situação Servidor":"ATIVO",
         "Data Exercício":"2010-10-05T00:00:00.000"
+    },
+    {
+        "Masp\/Admissão":91929232,
+        "MASP":9192923,
+        "Nº Admissão":2,
+        "Nome Servidor":"DOMINGOS EUCLIDES FIORITA LAGE",
+        "Data Completa":"1962-10-29T00:00:00.000",
+        "Cod Sexo":"M",
+        "Cod Carreira":"MED",
+        "Categoria Profissional\/Ocupação":"MEDICO CLINICO",
+        "Situação Servidor":"ATIVO",
+        "Data Exercício":"1990-08-01T00:00:00.000"
     },
     {
         "Masp\/Admissão":91951652,

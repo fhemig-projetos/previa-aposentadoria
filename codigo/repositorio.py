@@ -1,35 +1,31 @@
-from pathlib import Path
-
 import pandas as pd
-
 from codigo import Servidor
 
 
 class RepositorioServidores:
-    def __init__(self, caminho_dados: str | Path):
-        self.caminho_dados = Path(caminho_dados)
-        self.df = self._carregar_dataframe()
+    def __init__(self, caminho_json: str):
+        self.caminho_json = caminho_json
+        self.df = pd.read_json(
+            self.caminho_json, 
+            dtype={
+                "MASP": str,
+                "Nº Admissão": str,
+                "MASP/Admissão": str,
+            }
+        )
+        self._normalizar_colunas()
 
-    def _carregar_dataframe(self) -> pd.DataFrame:
-        if not self.caminho_dados.exists():
-            raise FileNotFoundError(
-                f"Arquivo de dados não encontrado: {self.caminho_dados}"
-            )
+    def _normalizar_colunas(self):
+        colunas_texto = [
+            "Masp/Admissão",
+            "MASP",
+            "Nº Admissão",
+        ]
 
-        extensao = self.caminho_dados.suffix.lower()
+        for coluna in colunas_texto:
+            if coluna in self.df.columns:
+                self.df[coluna] = self.df[coluna].astype(str).str.strip()
 
-        if extensao == ".json":
-            return pd.read_json(self.caminho_dados, dtype={"MASP": str})
-
-        if extensao == ".xlsx":
-            return pd.read_excel(
-                self.caminho_dados,
-                sheet_name=0,
-                engine="openpyxl",
-                dtype={"MASP": str, "ADM": str},
-            )
-
-        raise ValueError(f"Formato não suportado: {self.caminho_dados}")
 
     def buscar_por_masp_adm(self, masp: str, adm: str) -> Servidor | None:
         masp_adm_busca = f"{masp}{adm}"

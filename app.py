@@ -1,13 +1,12 @@
-from pathlib import Path
-from datetime import date
-
 import streamlit as st
+from datetime import date
+import pandas as pd
 
 from codigo import DadosTempo
 from codigo import RepositorioServidores
 from codigo import SimuladorAposentadoria
 from codigo import PDFGenerator
-from codigo.converter_json import converter_excel_para_json
+#from codigo.converter_json import converter_excel_para_json
 
 st.set_page_config(
     page_title="Prévia de Aposentadoria",
@@ -87,34 +86,22 @@ st.set_page_config(
 
 class AppPreviaAposentadoria:
     def __init__(self):
-        self._garantir_base_dados()
+#        self._atualizar_base_dados()
         self.repositorio = RepositorioServidores("dados/dados_cadastrais.json")
         self.simulador = SimuladorAposentadoria()
         self.pdf_generator = PDFGenerator()
 
-    def _garantir_base_dados(self):
-        caminho_json = Path("dados/dados_cadastrais.json")
-        caminho_excel = Path("dados/dados_cadastrais.xlsx")
-
-        if caminho_json.exists():
-            return
-
-        if caminho_excel.exists():
-            try:
-                converter_excel_para_json(
-                    caminho_excel=str(caminho_excel),
-                    caminho_json=str(caminho_json),
-                )
-                return
-            except Exception as e:
-                st.error(f"Erro ao converter a base Excel para JSON: {e}")
-                st.stop()
-
-        st.error(
-            "Não foi encontrado um arquivo de base em JSON ou XLSX. "
-            "Adicione dados/dados_cadastrais.json para uso direto no GitHub."
-        )
-        st.stop()
+#    def _atualizar_base_dados(self):
+#        try:            
+#            converter_excel_para_json(
+#                caminho_excel="dados/dados_cadastrais.xlsx",
+#                caminho_json="dados/dados_cadastrais.json"
+#            )
+#        except Exception as e:
+#            st.error(
+#                f"Erro ao carregar bases de dados: {e}"
+#            )
+#            st.stop()
 
     def executar(self):
         exibir_cabecalho()

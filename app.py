@@ -1,7 +1,6 @@
 import streamlit as st
 from datetime import date
 import pandas as pd
-import requests
 
 from codigo import DadosTempo
 from codigo import RepositorioServidores
@@ -93,11 +92,7 @@ class AppPreviaAposentadoria:
         self.pdf_generator = PDFGenerator()
 
     def _atualizar_base_dados(self):
-        try:
-            url = st.secrets["url"]
-            resposta = requests.get(url)
-            with open("dados/dados_cadastrais.xlsx", "wb") as f:
-                f.write(resposta.content)
+        try:            
             converter_excel_para_json(
                 caminho_excel="dados/dados_cadastrais.xlsx",
                 caminho_json="dados/dados_cadastrais.json"

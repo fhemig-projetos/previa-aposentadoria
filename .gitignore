@@ -19,7 +19,6 @@ build/
 
 # Arquivos
 .xlsx
-.json
 
 output/
 dados/

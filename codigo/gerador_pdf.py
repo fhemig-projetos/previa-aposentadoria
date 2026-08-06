@@ -7,12 +7,10 @@ from reportlab.platypus import (
     Spacer,
     Table,
     TableStyle,
-    Image
 )
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib import colors
 from reportlab.lib.enums import TA_CENTER
-from reportlab.platypus import NextPageTemplate, PageBreak
 from pathlib import Path
 from datetime import datetime
 import os

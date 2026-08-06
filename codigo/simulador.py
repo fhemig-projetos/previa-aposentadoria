@@ -4,7 +4,7 @@ from codigo import (
     RegraDireitoAdquirido,
     RegraGeral,
     RegraCompulsoria,
-#    RegraPontos,
+    RegraPontos,
 )
 
 
@@ -14,7 +14,7 @@ class SimuladorAposentadoria:
             RegraDireitoAdquirido(),
             RegraGeral(),
             RegraCompulsoria(),
- #           RegraPontos(),
+            RegraPontos(),
         ]
 
     def simular(

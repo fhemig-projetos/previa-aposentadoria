@@ -1,5 +1,5 @@
 from codigo import Servidor, DadosTempo, ResultadoRegra
-from regra_modelo import RegraAposentadoria
+from .regra_modelo import RegraAposentadoria
 
 class RegraGeral(RegraAposentadoria):
     def __init__(self):

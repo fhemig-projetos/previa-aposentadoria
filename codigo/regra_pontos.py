@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from codigo import Servidor, DadosTempo, ResultadoRegra
 from datetime import date
-from regra_modelo import RegraAposentadoria
+from .regra_modelo import RegraAposentadoria
 
 class RegraPontos(RegraAposentadoria):
     def __init__(self):

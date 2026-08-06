@@ -265,7 +265,6 @@ class PDFGenerator:
                 "idade_minima": "idade",
                 "contribuicao_minima": "anos_total_contribuicao",
                 "servico_publico_minimo": "anos_efetivo_exercicio",
-                "carreira_minima": "anos_na_carreira",
                 "cargo_minimo": "anos_no_cargo",
                 "ingresso_maximo": "data_admissao",
                 "idade_compulsoria": "idade",

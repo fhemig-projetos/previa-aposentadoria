@@ -59,10 +59,6 @@ class DadosTempo:
     def anos_no_cargo(self) -> int:
         return self.dias_para_anos(self.dias_no_cargo)
 
-    @property
-    def anos_na_carreira(self) -> int:
-        return self.dias_para_anos(self.demais_dias)
-
 
 @dataclass
 class ResultadoRegra:

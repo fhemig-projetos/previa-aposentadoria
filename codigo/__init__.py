@@ -2,11 +2,13 @@ from .modelos import Servidor
 from .modelos import DadosTempo
 from .modelos import ResultadoRegra
 from .repositorio import RepositorioServidores
-from .regras import RegraAposentadoria
-from .regras import RegraDireitoAdquirido
-from .regras import RegraGeral
-from .regras import RegraCompulsoria
-#from .regras import RegraPontos
+
+from .regra_modelo import RegraAposentadoria
+from .regra_direito_adquirido import RegraDireitoAdquirido
+from .regra_compulsoria import RegraCompulsoria
+from .regra_geral import RegraGeral
+from .regra_pontos import RegraPontos
+
 from .simulador import SimuladorAposentadoria
 from .gerador_pdf import PDFGenerator
 

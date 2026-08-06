@@ -128,7 +128,15 @@ class AppPreviaAposentadoria:
             st.error("MASP/ADM não encontrado.")
             return
 
-        self._exibir_dados_servidor(servidor)
+        data_admissao = self._exibir_dados_servidor(servidor)
+
+        if data_admissao is None:
+            st.warning("Informe uma data de admissão válida.")
+            st.stop()
+
+        # Usa a data de admissão possivelmente editada pelo usuário em todas
+        # as etapas seguintes (cálculo do teto, regras e PDF).
+        servidor.data_admissao = data_admissao
 
         dados_tempo = self._capturar_dados_tempo(servidor)
 
@@ -154,7 +162,7 @@ class AppPreviaAposentadoria:
             return "Não"
         return "Não informado"
 
-    def _exibir_dados_servidor(self, servidor):
+    def _exibir_dados_servidor(self, servidor) -> date:
         st.subheader("Dados funcionais")
 
         col1, col2 = st.columns(2)
@@ -168,10 +176,6 @@ class AppPreviaAposentadoria:
 
         with col2:
             st.write(
-                f"**Data de Admissão:** "
-                f"{servidor.data_admissao.strftime('%d/%m/%Y')}"
-            )
-            st.write(
                 f"**Data de Nascimento:** "
                 f"{servidor.data_nascimento.strftime('%d/%m/%Y')}"
             )
@@ -183,6 +187,24 @@ class AppPreviaAposentadoria:
                 f"**Idade:** "
                 f"{servidor.idade} anos"
             )
+            if st.session_state.get("data_admissao_editavel") is None:
+                st.session_state["data_admissao_editavel"] = servidor.data_admissao
+
+            chave_data_admissao = f"data_admissao_editavel_{servidor.masp}_{servidor.adm}"
+            data_admissao = st.date_input(
+                "Data de Admissão",
+                value=servidor.data_admissao,
+                key=chave_data_admissao,
+                format="DD/MM/YYYY"
+            )
+            if data_admissao is not None and data_admissao != servidor.data_admissao:
+                st.caption(
+                    "A data foi alterada manualmente. "
+                    f"Registro na base: {servidor.data_admissao.strftime('%d/%m/%Y')}"
+                )
+            st.caption(
+                "Se a data de admissão for igual 01/08/1990, o sistema pode ter considerado que o servidor ingressou no serviço público com a implementação do regime estatutário, necessário conferência."
+            )
             #st.write(
             #    f"**Sujeito ao teto do INSS:** "
             #    f"{self.formatar_indefinido(getattr(servidor, 'sujeito_ao_teto_inss', None))}"
@@ -192,6 +214,8 @@ class AppPreviaAposentadoria:
             #    f"**Dias sem interrupção:** "
             #    f"{self.formatar_indefinido(getattr(servidor, 'interrupcao', None))}"
             #)
+
+            return data_admissao
 
     def _capturar_dados_tempo(self, servidor) -> DadosTempo:
         st.subheader("Informações complementares")
@@ -241,7 +265,7 @@ class AppPreviaAposentadoria:
                 "obrigatoriamente está sujeito ao teto do INSS, já para os servidores "
                 "que ingressaram antes de 12/02/2015 é opcional escolher contribuir "
                 "até o valor do teto do INSS."
-            )            
+            )
 
         with col2:
 

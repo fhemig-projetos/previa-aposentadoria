@@ -379,6 +379,10 @@ class AppPreviaAposentadoria:
                     with st.expander("Ver observações"):
                         for observacao in resultado.observacoes:
                             st.write(f"• {observacao}")
+################### ESCREVI A PARTIR DAQUI
+                st.markdown("#### Forma de Provento")
+                st.write(f"• {resultado.proventos}")
+                    
 
 
 if __name__ == "__main__":

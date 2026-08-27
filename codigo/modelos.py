@@ -69,3 +69,4 @@ class ResultadoRegra:
     valores_apurados: dict
     pendencias: list
     observacoes: list
+    proventos: list[str]

@@ -51,6 +51,11 @@ class RegraDireitoAdquirido(RegraAposentadoria):
                 f"Faltam  {faltam} anos no cargo."
             )
 
+        #if servidor.idade >= idade_minima and dados_tempo.anos_total_contribuicao >= contribuicao_minima and dados_tempo.anos_efetivo_exercicio >= servico_publico_minimo and dados_tempo.anos_no_cargo >= cargo_minimo and servidor.data_admissao <= date(2003,12,31):
+        #    provento = "Provento integral com base na última remuneração e com direito à paridade: Art. 147, §2º, inciso I, e §3º, inciso I, do ADCT, acrescentado pela E.C. nº 104/2020."
+        #else:
+        #    provento = "Média aritmética de 80 por cento das maiores remunerações de contribuições recebidas desde 07/1994. Achado o valor da média, aplica-se 100 por cento do valor da média: Art. 147, §2º, inciso II, e §3º, inciso II, do ADCT, acrescentado pela E.C. nº 104/2020 (média sem paridade)."
+
         return ResultadoRegra(
             codigo=self.codigo,
             nome=self.nome,
@@ -71,6 +76,22 @@ class RegraDireitoAdquirido(RegraAposentadoria):
             },
             pendencias=pendencias,
             observacoes=[
-                "Base Legal: Emenda Constitucional nº 104 de 2020."
-            ]
+                "Base Legal: Emenda Constitucional nº 104 de 2020.",
+                "Reajuste dos Proventos: Os proventos serão reajustados na mesma data e índices em que se der o reajuste dos benefícios do RGPS."
+            ],
+            proventos=(
+                "Período adicional de contribuição: correspondente a 50% do tempo que, "
+                "em 15/09/2020 (data da E.C. nº 104/2020), faltaria para atingir o "
+                "tempo mínimo exigido de 35 anos para homem; 30 anos para mulher. "
+                "Cálculo dos proventos I: provento integral com base na última "
+                "remuneração e com direito à paridade: Art. 147, §2º, inciso I, e §3º, "
+                "inciso I, do ADCT, acrescentado pela E.C. nº 104/2020, para o servidor "
+                "que comprove cumulativamente: a) Cumprimento de todos os requisitos "
+                "para a aposentadoria e b) Ingresso no cargo efetivo em que se dará a "
+                "aposentadoria até 31/12/2003. Cálculo dos proventos II: média "
+                "aritmética de 80% das maiores remunerações de contribuições recebidas "
+                "desde 07/1994. Achado o valor da média, aplica-se 100% do valor da "
+                "média: Art. 147, §2º, inciso II, e §3º, inciso II, do ADCT, "
+                "acrescentado pela E.C. nº 104/2020 (média sem paridade). "
+            )
         )

@@ -31,15 +31,7 @@ class RegraCompulsoria(RegraAposentadoria):
             pendencias=pendencias,
             observacoes=[
                 "Base legal: Constituição Federal, Art. 40, §1º, III."
-            ]
-        )
+            ],
+            proventos="Média aritmética de 80% das maiores remunerações de contribuições recebidas desde 07/1994. Achado o valor da média, deve-se aplicar 60% aos 20 anos e mais 2% para cada ano que exceder o tempo mínimo de 20 anos, tanto para homem quanto para mulher. Caso o servidor comprove menos que 20 anos na data do aniversário de 75 anos, o tempo total de contribuição será utilizado proporcionalmente para a apuração do valor do provento."
 
-class RegraPontos(RegraAposentadoria):
-    pass
-'''    def __init__(self):
-        super().__init__(
-            codigo="REGRA_PONTOS",
-            nome="Regra de Pontos"
         )
-    
-    def avaliar(self, servidor: Servidor, dados_tempo: DadosTempo) -> ResultadoRegra:'''

@@ -65,5 +65,8 @@ class RegraGeral(RegraAposentadoria):
             pendencias=pendencias,
             observacoes=[
                 "Base legal: Constituição Estadual de Minas Gerais de 1989, art. 36, alterado pela Emenda Constitucional nº 104 de 2020.",
-            ]
+                "Reajuste dos Proventos: Os proventos serão reajustados na mesma data e índices em que se der o reajuste dos benefícios do RGPS: Art. 7º, §7º da L.C. nº 64/2002, redação dada pela L.C. nº 156/2020."
+            ],
+            proventos="Média aritmética de 80% das maiores remunerações de contribuições recebidas desde 07/1994. Achado o valor da média, deve-se aplicar 60% aos 20 anos e mais 2% para cada ano que exceder o tempo mínimo de 20 anos, tanto para homem quanto para mulher."
+            
         )

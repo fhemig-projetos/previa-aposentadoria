@@ -258,6 +258,11 @@ class PDFGenerator:
             else:
                 observacoes = "-"
 
+            if resultado.proventos:
+                proventos = "<br/>".join(
+                    [f"- {provento}" for provento in resultado.proventos.split("\n")]
+                )
+
             # Mapeamento entre chaves de requisitos e valores_apurados
             mapa_requisitos_valores = {
                 "idade_minima": "idade",
@@ -344,7 +349,19 @@ class PDFGenerator:
                     f"{observacoes}",
                     self.styles["BodyText"]
                 )
-            )           
+            )
+            elementos.append(
+                Paragraph(
+                    "<b>Proventos:</b>",
+                    self.styles["BodyText"]
+                )
+            )
+            elementos.append(
+                Paragraph(
+                    f"{proventos}",
+                    self.styles["BodyText"]
+                )
+            )
 
 
     def _adicionar_rodape(self, elementos: list):

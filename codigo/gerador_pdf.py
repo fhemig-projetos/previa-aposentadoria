@@ -260,7 +260,18 @@ class PDFGenerator:
 
             if resultado.proventos:
                 proventos = "<br/>".join(
-                    [f"- {provento}" for provento in resultado.proventos.split("\n")]
+                    [f"- {provento}" for provento in resultado.proventos] #.split("\n")
+                )
+            else:
+                proventos = "-"
+
+            if resultado.data_previsao:
+                data_prevista = resultado.data_previsao.strftime("%d/%m/%Y")
+            elif resultado.cumpriu:
+                data_prevista = "Requisitos já atendidos."
+            else:
+                data_prevista = (
+                    "Não foi possível estimar a data de atendimento dos requisitos."
                 )
 
             # Mapeamento entre chaves de requisitos e valores_apurados
@@ -359,6 +370,18 @@ class PDFGenerator:
             elementos.append(
                 Paragraph(
                     f"{proventos}",
+                    self.styles["BodyText"]
+                )
+            )
+            elementos.append(
+                Paragraph(
+                    "<b>Data prevista para atendimento dos requisitos:</b>",
+                    self.styles["BodyText"]
+                )
+            )
+            elementos.append(
+                Paragraph(
+                    f"{data_prevista}",
                     self.styles["BodyText"]
                 )
             )

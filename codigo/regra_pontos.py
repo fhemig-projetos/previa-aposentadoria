@@ -2,6 +2,7 @@
 
 from codigo import Servidor, DadosTempo, ResultadoRegra
 from .regra_modelo import RegraAposentadoria
+from .projecao import anos_de_dias, idade_em, projetar_data
 
 
 class RegraPontos(RegraAposentadoria):
@@ -134,12 +135,34 @@ class RegraPontos(RegraAposentadoria):
             faltam = pontos_minimos - somatorio_pontos
             pendencias.append(f"Faltam {faltam} pontos.")
 
+        cumpriu = len(pendencias) == 0
+
+        hoje = date.today()
+
+        def _atende_data(data: date) -> bool:
+            dias_adicionais = max(0, (data - hoje).days)
+            idade_na_data = idade_em(data, servidor.data_nascimento)
+            anos_contrib_na_data = anos_de_dias(
+                dados_tempo.dias_total_contribuicao + dias_adicionais
+            )
+            return (
+                idade_na_data >= idade_minima_efetiva
+                and anos_contrib_na_data >= contribuicao_minima
+                and anos_de_dias(
+                    dados_tempo.dias_efetivo_exercicio + dias_adicionais
+                ) >= servico_publico_minimo
+                and anos_de_dias(
+                    dados_tempo.dias_no_cargo + dias_adicionais
+                ) >= cargo_minimo
+                and (idade_na_data + anos_contrib_na_data)
+                >= self._calcular_pontos_minimos(servidor.sexo, data)
+            )
+
+        data_previsao = None if cumpriu else projetar_data(_atende_data)
+
         observacoes = [
             "Base legal: Constituição Estadual de Minas Gerais de 1989, art. 36, "
             "alterado pela Emenda Constitucional nº 104 de 2020, art. 146 do ADCT.",
-            "Reajuste dos Proventos: Os proventos serão reajustados na mesma data e "
-            "índices em que se der o reajuste dos benefícios do RGPS: Art. 146, §7º, "
-            "inciso II, do ADCT, acrescentado pela E.C. nº 104/2020.",
         ]
         if reducao_dias > 0:
             observacoes.append(
@@ -152,7 +175,8 @@ class RegraPontos(RegraAposentadoria):
         return ResultadoRegra(
             codigo=self.codigo,
             nome=self.nome,
-            cumpriu=len(pendencias) == 0,
+            cumpriu=cumpriu,
+            data_previsao=data_previsao,
             requisitos={
                 "idade_minima": idade_minima,
                 "contribuicao_minima": contribuicao_minima,
@@ -171,15 +195,7 @@ class RegraPontos(RegraAposentadoria):
             },
             pendencias=pendencias,
             observacoes=observacoes,
-            proventos=(
-                "Média aritmética de 80% das maiores remunerações de contribuições "
-                "recebidas desde 07/1994. Achado o valor da média, aplica-se 100% do "
-                "valor da média: Art. 146, §7º, inciso II, do ADCT, acrescentado pela "
-                "E.C. nº 104/2020. Para quem cumprir, cumulativamente, todos os "
-                "requisitos da regra, tiver ingressado no cargo efetivo em que se dará "
-                "a aposentadoria até 31/12/2003 e atingir 60 anos (mulher) ou 65 anos "
-                "(homem): provento integral com base na última remuneração e com "
-                "direito à paridade: Art. 146, §6º, inciso I e §7º, inciso I, do ADCT, "
-                "acrescentado pela E.C. nº 104/2020."
-            ),
+            proventos=
+                ["Cálculo dos proventos I: Provento integral com base na última remuneração e com direito a paridade, desde que comprove cumulativamente o cumprimento de todos os requisitos para a aposentadoria, ingresso no cargo efetivo em que se dará a aposentadoria até 31/12/2003 e 60 anos de idade, se mulher ou 65 anos de idade, se homem.",
+                "Cálculo dos proventos II: Média aritmética de 80% das maiores remunerações de contribuições recebidas desde 07/1994. Achado o valor da média, aplica-se 100% do valor da média."]
         )

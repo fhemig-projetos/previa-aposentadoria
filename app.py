@@ -375,14 +375,28 @@ class AppPreviaAposentadoria:
                 else:
                     st.success("Não há pendências para esta regra.")
 
+                st.markdown("#### Forma de Provento")
+                for provento in resultado.proventos:
+                    st.write(f"• {provento}")
+
+                st.markdown("#### Data prevista para atendimento dos requisitos")
+                if resultado.data_previsao:
+                    st.write(
+                        f"• {resultado.data_previsao.strftime('%d/%m/%Y')}"
+                    )
+                elif resultado.cumpriu:
+                    st.write("• Requisitos já atendidos.")
+                else:
+                    st.write(
+                        "• Não foi possível estimar a data de atendimento "
+                        "dos requisitos."
+                    )
+
                 if resultado.observacoes:
                     with st.expander("Ver observações"):
                         for observacao in resultado.observacoes:
                             st.write(f"• {observacao}")
-################### ESCREVI A PARTIR DAQUI
-                st.markdown("#### Forma de Provento")
-                st.write(f"• {resultado.proventos}")
-                    
+
 
 
 if __name__ == "__main__":

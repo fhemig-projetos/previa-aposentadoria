@@ -1,6 +1,7 @@
 from codigo import Servidor, DadosTempo, ResultadoRegra
 from datetime import date
 from .regra_modelo import RegraAposentadoria
+from .projecao import anos_de_dias, idade_em, projetar_data
 
 class RegraDireitoAdquirido(RegraAposentadoria):
     def __init__(self):
@@ -56,10 +57,32 @@ class RegraDireitoAdquirido(RegraAposentadoria):
         #else:
         #    provento = "Média aritmética de 80 por cento das maiores remunerações de contribuições recebidas desde 07/1994. Achado o valor da média, aplica-se 100 por cento do valor da média: Art. 147, §2º, inciso II, e §3º, inciso II, do ADCT, acrescentado pela E.C. nº 104/2020 (média sem paridade)."
 
+        cumpriu = len(pendencias) == 0
+
+        hoje = date.today()
+
+        def _atende_data(data: date) -> bool:
+            dias_adicionais = max(0, (data - hoje).days)
+            return (
+                idade_em(data, servidor.data_nascimento) >= idade_minima
+                and anos_de_dias(
+                    dados_tempo.dias_total_contribuicao + dias_adicionais
+                ) >= contribuicao_minima
+                and anos_de_dias(
+                    dados_tempo.dias_efetivo_exercicio + dias_adicionais
+                ) >= servico_publico_minimo
+                and anos_de_dias(
+                    dados_tempo.dias_no_cargo + dias_adicionais
+                ) >= cargo_minimo
+            )
+
+        data_previsao = None if cumpriu else projetar_data(_atende_data)
+
         return ResultadoRegra(
             codigo=self.codigo,
             nome=self.nome,
-            cumpriu=len(pendencias) == 0,
+            cumpriu=cumpriu,
+            data_previsao=data_previsao,
             requisitos={
                 "idade_minima": idade_minima,
                 "contribuicao_minima": contribuicao_minima,
@@ -79,19 +102,8 @@ class RegraDireitoAdquirido(RegraAposentadoria):
                 "Base Legal: Emenda Constitucional nº 104 de 2020.",
                 "Reajuste dos Proventos: Os proventos serão reajustados na mesma data e índices em que se der o reajuste dos benefícios do RGPS."
             ],
-            proventos=(
-                "Período adicional de contribuição: correspondente a 50% do tempo que, "
-                "em 15/09/2020 (data da E.C. nº 104/2020), faltaria para atingir o "
-                "tempo mínimo exigido de 35 anos para homem; 30 anos para mulher. "
-                "Cálculo dos proventos I: provento integral com base na última "
-                "remuneração e com direito à paridade: Art. 147, §2º, inciso I, e §3º, "
-                "inciso I, do ADCT, acrescentado pela E.C. nº 104/2020, para o servidor "
-                "que comprove cumulativamente: a) Cumprimento de todos os requisitos "
-                "para a aposentadoria e b) Ingresso no cargo efetivo em que se dará a "
-                "aposentadoria até 31/12/2003. Cálculo dos proventos II: média "
-                "aritmética de 80% das maiores remunerações de contribuições recebidas "
-                "desde 07/1994. Achado o valor da média, aplica-se 100% do valor da "
-                "média: Art. 147, §2º, inciso II, e §3º, inciso II, do ADCT, "
-                "acrescentado pela E.C. nº 104/2020 (média sem paridade). "
-            )
+            proventos=
+                ["Cálculo dos proventos I: Provento integral com base na última remuneração e com direito à paridade para o servidor que comprove cumulativamente o cumprimento de todos os requisitos para a aposentadoria e ingresso no cargo efetivo em que se dará a aposentadoria até 31/12/2003.",
+                "Cálculo dos proventos II: Média aritmética de 80% das maiores remunerações de contribuições recebidas desde 07/1994. Achado o valor da média, aplica-se 100% do valor da média."]
+            
         )

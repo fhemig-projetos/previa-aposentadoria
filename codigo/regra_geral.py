@@ -1,5 +1,8 @@
+from datetime import date
+
 from codigo import Servidor, DadosTempo, ResultadoRegra
 from .regra_modelo import RegraAposentadoria
+from .projecao import anos_de_dias, idade_em, projetar_data
 
 class RegraGeral(RegraAposentadoria):
     def __init__(self):
@@ -46,10 +49,30 @@ class RegraGeral(RegraAposentadoria):
         
         cumpriu = len(pendencias) == 0
 
+        hoje = date.today()
+
+        def _atende_data(data: date) -> bool:
+            dias_adicionais = max(0, (data - hoje).days)
+            return (
+                idade_em(data, servidor.data_nascimento) >= idade_minima
+                and anos_de_dias(
+                    dados_tempo.dias_total_contribuicao + dias_adicionais
+                ) >= contribuicao_minima
+                and anos_de_dias(
+                    dados_tempo.dias_efetivo_exercicio + dias_adicionais
+                ) >= servico_publico_minimo
+                and anos_de_dias(
+                    dados_tempo.dias_no_cargo + dias_adicionais
+                ) >= cargo_minimo
+            )
+
+        data_previsao = None if cumpriu else projetar_data(_atende_data)
+
         return ResultadoRegra(
             codigo=self.codigo,
             nome=self.nome,
             cumpriu=cumpriu,
+            data_previsao=data_previsao,
             requisitos={
                 "idade_minima": idade_minima,
                 "contribuicao_minima": contribuicao_minima,
@@ -65,8 +88,6 @@ class RegraGeral(RegraAposentadoria):
             pendencias=pendencias,
             observacoes=[
                 "Base legal: Constituição Estadual de Minas Gerais de 1989, art. 36, alterado pela Emenda Constitucional nº 104 de 2020.",
-                "Reajuste dos Proventos: Os proventos serão reajustados na mesma data e índices em que se der o reajuste dos benefícios do RGPS: Art. 7º, §7º da L.C. nº 64/2002, redação dada pela L.C. nº 156/2020."
             ],
-            proventos="Média aritmética de 80% das maiores remunerações de contribuições recebidas desde 07/1994. Achado o valor da média, deve-se aplicar 60% aos 20 anos e mais 2% para cada ano que exceder o tempo mínimo de 20 anos, tanto para homem quanto para mulher."
-            
+            proventos=["Ao completar os requisitos mínimos os proventos serão de 100% da média (80% das maiores remunerações), reajustados conforme índice de atualização dos benefícios do RGPS."]
         )

@@ -56,6 +56,10 @@ class DadosTempo:
         return self.anos_efetivo_exercicio + self.anos_contribuicao_externa
 
     @property
+    def dias_total_contribuicao(self) -> int:
+        return self.dias_efetivo_exercicio + self.dias_contribuicao_externa
+
+    @property
     def anos_no_cargo(self) -> int:
         return self.dias_para_anos(self.dias_no_cargo)
 
@@ -70,3 +74,4 @@ class ResultadoRegra:
     pendencias: list
     observacoes: list
     proventos: list[str]
+    data_previsao: date | None = None

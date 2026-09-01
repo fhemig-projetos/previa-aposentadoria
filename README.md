@@ -16,6 +16,7 @@ Aplicação web para simulação preliminar de aposentadoria de servidores públ
   - Regra de idade e tempo de contribuição
   - Direito adquirido — Art. 6º da EC 41/2003
   - Regra do teto do INSS
+- **Previsão da data de atendimento** dos requisitos de cada regra
 - **Geração de relatório em PDF** com o resultado da simulação
 
 ## Estrutura do projeto

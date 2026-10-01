@@ -78,8 +78,6 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-A aplicação será aberta no navegador em `http://localhost:8501`.
-
 ## Uso
 
 1. Informe o **MASP** e o **ADM** do servidor.
@@ -97,4 +95,4 @@ A aplicação será aberta no navegador em `http://localhost:8501`.
 ## Observações
 
 - A simulação é **preliminar e ilustrativa**, não substituindo análise oficial do órgão competente.
-- A base de dados deve estar no formato Excel com as colunas esperadas pelo `RepositorioServidores`.
+- A base de dados deve estar no formato Excel ou json com as colunas esperadas pelo `RepositorioServidores`.

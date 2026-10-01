@@ -117,7 +117,7 @@ class RegraPontos(RegraAposentadoria):
 
         if servidor.idade < idade_minima_efetiva:
             faltam = idade_minima_efetiva - servidor.idade
-            pendencias.append(f"Faltam {faltam:.2f} anos de idade.")
+            pendencias.append(f"Faltam {faltam} anos de idade.")
 
         if dados_tempo.anos_total_contribuicao < contribuicao_minima:
             faltam = contribuicao_minima - dados_tempo.anos_total_contribuicao
@@ -191,7 +191,7 @@ class RegraPontos(RegraAposentadoria):
                 "anos_no_cargo": dados_tempo.anos_no_cargo,
                 "somatorio_pontos": somatorio_pontos,
                 "pontos_minimos": pontos_minimos,
-                "idade_minima_efetiva": round(idade_minima_efetiva, 2),
+                "idade_minima_efetiva": idade_minima_efetiva,
             },
             pendencias=pendencias,
             observacoes=observacoes,

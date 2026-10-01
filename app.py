@@ -154,6 +154,10 @@ class AppPreviaAposentadoria:
                     file_name=f"previa_aposentadoria_{servidor.masp}.pdf",
                     mime="application/pdf"
                 )
+    def formatar_valor(self, valor):
+        if isinstance(valor, float) and valor.is_integer():
+            return int(valor)
+        return valor
 
     def formatar_indefinido(self,valor):
         if valor is True:
@@ -361,12 +365,18 @@ class AppPreviaAposentadoria:
                 with col1:
                     st.markdown("#### Valores apurados")
                     for chave, valor in resultado.valores_apurados.items():
-                        st.write(f"**{self._formatar_chave(chave)}:** {valor}")
+                        st.write(
+                            f"**{self._formatar_chave(chave)}:** "
+                            f"{self.formatar_valor(valor)}"
+                        )
 
                 with col2:
                     st.markdown("#### Requisitos")
                     for chave, valor in resultado.requisitos.items():
-                        st.write(f"**{self._formatar_chave(chave)}:** {valor}")
+                        st.write(
+                            f"**{self._formatar_chave(chave)}:** "
+                            f"{self.formatar_valor(valor)}"
+                        )
 
                 if resultado.pendencias:
                     st.markdown("#### O que falta cumprir")

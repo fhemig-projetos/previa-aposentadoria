@@ -1,6 +1,7 @@
 from codigo import Servidor, DadosTempo, ResultadoRegra
 from .regra_modelo import RegraAposentadoria
 from .projecao import idade_em, projetar_data
+import math
 
 class RegraCompulsoria(RegraAposentadoria):
     def __init__(self):
@@ -8,6 +9,22 @@ class RegraCompulsoria(RegraAposentadoria):
             codigo="REGRA_COMPULSORIA",
             nome="Regra de Aposentadoria Compulsória"
         )
+    
+    @staticmethod
+    def _fmt_tempo(anos) -> str:
+        """Converte anos decimais em 'X anos e Y meses'.
+        5.0 -> '5 anos' | 4.6667 -> '4 anos e 8 meses' | 1.0833 -> '1 ano e 1 mês'
+        """
+        # round(..., 6) evita erro de ponto flutuante (ex.: 60.00000001 meses)
+        total_meses = math.ceil(round(float(anos) * 12, 6))
+        a, m = divmod(total_meses, 12)
+
+        partes = []
+        if a:
+            partes.append(f"{a} {'ano' if a == 1 else 'anos'}")
+        if m:
+            partes.append(f"{m} {'mês' if m == 1 else 'meses'}")
+        return " e ".join(partes) if partes else "0 meses"
 
     def avaliar(self, servidor: Servidor, dados_tempo: DadosTempo) -> ResultadoRegra:
         idade_compulsoria = 75
@@ -16,7 +33,7 @@ class RegraCompulsoria(RegraAposentadoria):
         if servidor.idade < idade_compulsoria:
             faltam = idade_compulsoria - servidor.idade
             pendencias.append(
-                f"Faltam {faltam} anos para a aposentadoria compulsória."
+                f"{self._fmt_tempo(faltam)} para a aposentadoria compulsória."
             )
 
         cumpriu = len(pendencias) == 0

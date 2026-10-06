@@ -381,7 +381,7 @@ class AppPreviaAposentadoria:
                 if resultado.pendencias:
                     st.markdown("#### O que falta cumprir")
                     for pendencia in resultado.pendencias:
-                        st.write(f"• {pendencia}")
+                        st.write(f"• {self.formatar_valor(pendencia)}")
                 else:
                     st.success("Não há pendências para esta regra.")
 

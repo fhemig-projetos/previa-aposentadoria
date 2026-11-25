@@ -1,0 +1,82 @@
+"""Modelos de dados: Servidor, DadosTempo e ResultadoRegra."""
+
+import math
+from dataclasses import dataclass
+from datetime import date
+
+from dateutil.relativedelta import relativedelta
+
+from .config import DIAS_POR_ANO
+
+
+@dataclass
+class Servidor:
+    masp: str
+    adm: str
+    nome: str
+    data_nascimento: date
+    sexo: str
+    cargo: str
+    funcao: str
+    data_admissao: date
+    sujeito_ao_teto_inss: bool | None = None
+
+    @property
+    def masp_adm(self) -> str:
+        return f"{self.masp}{self.adm}"
+
+    @property
+    def idade(self) -> int:
+        hoje = date.today()
+        return relativedelta(hoje, self.data_nascimento).years
+
+
+@dataclass
+class DadosTempo:
+    dias_efetivo_exercicio: int
+    dias_contribuicao_externa: int
+    dias_no_cargo: int
+    demais_dias: int
+    dias_abono: int
+    sujeito_ao_teto_inss: bool = False
+    interrupcao: bool = False
+    interrupcao_efetivo_2003: bool = False
+    interrupcao_efetivo_2020: bool = False
+    ferias_premio: bool = False
+
+    @staticmethod
+    def dias_para_anos(dias: int) -> int:
+        return math.floor(dias / DIAS_POR_ANO)
+
+    @property
+    def anos_efetivo_exercicio(self) -> int:
+        return self.dias_para_anos(self.dias_efetivo_exercicio)
+
+    @property
+    def anos_contribuicao_externa(self) -> int:
+        return self.dias_para_anos(self.dias_contribuicao_externa)
+
+    @property
+    def anos_total_contribuicao(self) -> int:
+        return self.anos_efetivo_exercicio + self.anos_contribuicao_externa
+
+    @property
+    def dias_total_contribuicao(self) -> int:
+        return self.dias_efetivo_exercicio + self.dias_contribuicao_externa
+
+    @property
+    def anos_no_cargo(self) -> int:
+        return self.dias_para_anos(self.dias_no_cargo)
+
+
+@dataclass
+class ResultadoRegra:
+    codigo: str
+    nome: str
+    cumpriu: bool
+    requisitos: dict
+    valores_apurados: dict
+    pendencias: list
+    observacoes: list
+    proventos: list[str]
+    data_previsao: date | None = None

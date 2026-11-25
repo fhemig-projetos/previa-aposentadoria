@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+.pytest_cache/
+
+# Segredos
+.streamlit/secrets.toml
+
+# Dados pessoais de servidores (LGPD) e arquivos gerados
+dados/*.json
+dados/*.xlsx
+!dados/dados_cadastrais.exemplo.json
+output/*
+!output/.gitkeep
+
+# Editor / SO
+.vscode/
+.idea/
+.DS_Store
